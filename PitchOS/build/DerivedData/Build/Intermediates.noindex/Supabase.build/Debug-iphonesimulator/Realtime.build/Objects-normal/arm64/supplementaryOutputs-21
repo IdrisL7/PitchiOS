@@ -1,0 +1,23 @@
+{
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/SourcePackages/checkouts/supabase-swift/Sources/Realtime/PresenceAction.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PresenceAction.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PresenceAction.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PresenceAction.dia",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PresenceAction.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PresenceAction.swiftdeps"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/SourcePackages/checkouts/supabase-swift/Sources/Realtime/PushV2.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PushV2.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PushV2.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PushV2.dia",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PushV2.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/PushV2.swiftdeps"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/SourcePackages/checkouts/supabase-swift/Sources/Realtime/RealtimeChannel+AsyncAwait.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/RealtimeChannel+AsyncAwait.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/RealtimeChannel+AsyncAwait.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/RealtimeChannel+AsyncAwait.dia",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/RealtimeChannel+AsyncAwait.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/Supabase.build/Debug-iphonesimulator/Realtime.build/Objects-normal/arm64/RealtimeChannel+AsyncAwait.swiftdeps"
+  }
+}

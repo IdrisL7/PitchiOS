@@ -1,0 +1,459 @@
+{
+  "" : {
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOS-primary.dia",
+    "emit-module-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOS-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOS-primary-emit-module.dia",
+    "pch" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOS-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOS-primary.swiftdeps"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/AppState.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppState.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppState.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppState.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppState.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppState.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppState.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppState.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppState~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Config/AppConfig.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppConfig.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppConfig.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppConfig.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppConfig.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppConfig.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppConfig.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppConfig.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AppConfig~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Config/Prompts.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Prompts.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Prompts.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Prompts.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Prompts.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Prompts.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Prompts.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Prompts.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Prompts~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/ContentView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Models/Deal.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Deal.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Deal.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Deal.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Deal.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Deal.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Deal.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Deal.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Deal~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Models/Output.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Output.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Output.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Output.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Output.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Output.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Output.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Output.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Output~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Models/Profile.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Profile.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Profile.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Profile.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Profile.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Profile.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Profile.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Profile.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/Profile~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Models/StreamChunk.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamChunk.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamChunk.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamChunk.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamChunk.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamChunk.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamChunk.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamChunk.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamChunk~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/PitchOSApp.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOSApp.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOSApp.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOSApp.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOSApp.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOSApp.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOSApp.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOSApp.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PitchOSApp~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Preview Content/PreviewData.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PreviewData.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PreviewData.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PreviewData.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PreviewData.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PreviewData.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PreviewData.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PreviewData.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PreviewData~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/AIService.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AIService.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AIService.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AIService.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AIService.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AIService.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AIService.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AIService.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AIService~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/AuthService.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthService.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthService.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthService.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthService.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthService.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthService.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthService.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthService~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/DealService.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealService.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealService.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealService.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealService.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealService.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealService.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealService.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealService~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/OutputService.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OutputService.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OutputService.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OutputService.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OutputService.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OutputService.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OutputService.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OutputService.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OutputService~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/ProfileService.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ProfileService.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ProfileService.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ProfileService.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ProfileService.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ProfileService.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ProfileService.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ProfileService.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ProfileService~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/SpeechService.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SpeechService.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SpeechService.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SpeechService.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SpeechService.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SpeechService.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SpeechService.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SpeechService.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SpeechService~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/StreamingParser.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingParser.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingParser.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingParser.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingParser.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingParser.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingParser.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingParser.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingParser~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/SupabaseService.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SupabaseService.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SupabaseService.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SupabaseService.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SupabaseService.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SupabaseService.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SupabaseService.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SupabaseService.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SupabaseService~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/UsageService.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/UsageService.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/UsageService.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/UsageService.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/UsageService.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/UsageService.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/UsageService.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/UsageService.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/UsageService~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/ViewModels/AuthViewModel.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthViewModel.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthViewModel.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthViewModel.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthViewModel.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthViewModel.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthViewModel.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthViewModel.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/AuthViewModel~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/ViewModels/DealListViewModel.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListViewModel.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListViewModel.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListViewModel.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListViewModel.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListViewModel.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListViewModel.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListViewModel.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListViewModel~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/ViewModels/ObjectionHandlerViewModel.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerViewModel.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerViewModel.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerViewModel.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerViewModel.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerViewModel.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerViewModel.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerViewModel.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerViewModel~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/ViewModels/OnboardingViewModel.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingViewModel.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingViewModel.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingViewModel.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingViewModel.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingViewModel.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingViewModel.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingViewModel.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingViewModel~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/ViewModels/PostCallViewModel.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallViewModel.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallViewModel.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallViewModel.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallViewModel.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallViewModel.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallViewModel.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallViewModel.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallViewModel~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/ViewModels/SettingsViewModel.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsViewModel.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsViewModel.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsViewModel.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsViewModel.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsViewModel.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsViewModel.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsViewModel.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsViewModel~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Auth/LoginView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/LoginView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/LoginView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/LoginView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/LoginView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/LoginView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/LoginView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/LoginView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/LoginView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Auth/SignUpView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SignUpView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SignUpView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SignUpView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SignUpView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SignUpView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SignUpView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SignUpView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SignUpView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Components/CopyButton.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/CopyButton.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/CopyButton.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/CopyButton.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/CopyButton.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/CopyButton.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/CopyButton.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/CopyButton.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/CopyButton~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Components/RatingView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/RatingView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/RatingView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/RatingView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/RatingView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/RatingView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/RatingView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/RatingView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/RatingView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Components/StreamingTextView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingTextView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingTextView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingTextView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingTextView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingTextView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingTextView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingTextView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/StreamingTextView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Components/VoiceInputButton.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/VoiceInputButton.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/VoiceInputButton.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/VoiceInputButton.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/VoiceInputButton.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/VoiceInputButton.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/VoiceInputButton.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/VoiceInputButton.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/VoiceInputButton~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Deals/DealDetailView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealDetailView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealDetailView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealDetailView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealDetailView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealDetailView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealDetailView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealDetailView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealDetailView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Deals/DealListView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/DealListView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Deals/NewDealSheet.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/NewDealSheet.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/NewDealSheet.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/NewDealSheet.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/NewDealSheet.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/NewDealSheet.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/NewDealSheet.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/NewDealSheet.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/NewDealSheet~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/ObjectionHandler/ObjectionHandlerView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionHandlerView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/ObjectionHandler/ObjectionResponseCard.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionResponseCard.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionResponseCard.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionResponseCard.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionResponseCard.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionResponseCard.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionResponseCard.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionResponseCard.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ObjectionResponseCard~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Onboarding/OnboardingBuyersView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingBuyersView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingBuyersView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingBuyersView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingBuyersView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingBuyersView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingBuyersView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingBuyersView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingBuyersView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Onboarding/OnboardingContainerView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingContainerView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingContainerView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingContainerView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingContainerView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingContainerView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingContainerView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingContainerView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingContainerView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Onboarding/OnboardingMethodologyView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingMethodologyView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingMethodologyView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingMethodologyView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingMethodologyView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingMethodologyView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingMethodologyView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingMethodologyView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingMethodologyView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Onboarding/OnboardingNameRoleView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingNameRoleView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingNameRoleView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingNameRoleView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingNameRoleView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingNameRoleView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingNameRoleView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingNameRoleView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingNameRoleView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Onboarding/OnboardingProductView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingProductView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingProductView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingProductView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingProductView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingProductView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingProductView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingProductView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/OnboardingProductView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/PostCall/PostCallView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/PostCallView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Settings/ICPEditView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ICPEditView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ICPEditView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ICPEditView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ICPEditView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ICPEditView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ICPEditView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ICPEditView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/ICPEditView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Settings/SettingsView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsView.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsView.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/SettingsView~partial.swiftmodule"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/PitchOS.build/Debug-iphoneos/PitchOS.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

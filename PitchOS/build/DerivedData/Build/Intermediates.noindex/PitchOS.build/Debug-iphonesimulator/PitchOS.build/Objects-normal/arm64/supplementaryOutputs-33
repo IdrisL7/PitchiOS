@@ -1,0 +1,44 @@
+{
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Config/DesignSystem.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DesignSystem.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DesignSystem.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DesignSystem.dia",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DesignSystem.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DesignSystem.swiftdeps"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Services/HapticService.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/HapticService.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/HapticService.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/HapticService.dia",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/HapticService.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/HapticService.swiftdeps"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Components/GenerateButton.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GenerateButton.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GenerateButton.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GenerateButton.dia",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GenerateButton.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GenerateButton.swiftdeps"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/Components/GlassCard.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GlassCard.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GlassCard.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GlassCard.dia",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GlassCard.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/GlassCard.swiftdeps"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/DiscoveryQuestions/DiscoveryQuestionsView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DiscoveryQuestionsView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DiscoveryQuestionsView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DiscoveryQuestionsView.dia",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DiscoveryQuestionsView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/DiscoveryQuestionsView.swiftdeps"
+  },
+  "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/PitchOS/Views/MeetingBrief/MeetingBriefView.swift" : {
+    "const-values" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/MeetingBriefView.swiftconstvalues",
+    "dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/MeetingBriefView.d",
+    "diagnostics" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/MeetingBriefView.dia",
+    "object" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/MeetingBriefView.o",
+    "swift-dependencies" : "/Users/driss/projects/claude-code-ios-dev-guide/.claude/worktrees/pensive-jennings/PitchOS/build/DerivedData/Build/Intermediates.noindex/PitchOS.build/Debug-iphonesimulator/PitchOS.build/Objects-normal/arm64/MeetingBriefView.swiftdeps"
+  }
+}

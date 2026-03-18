@@ -1,0 +1,18 @@
+# Xcode build artefacts
+PitchOS/build/
+PitchOS/DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Environment files — never commit secrets
+.env.local
+.env.*.local
+*.env
+
+# SPM local cache
+.build/
+SourcePackages/
+
+# macOS
+.DS_Store
