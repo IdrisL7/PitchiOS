@@ -11,8 +11,8 @@ enum AppConfig {
     static let supabaseURL     = "http://127.0.0.1:54321"
     static let supabaseAnonKey = "sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH"
     #else
-    static let supabaseURL     = "https://<YOUR-PROJECT>.supabase.co"
-    static let supabaseAnonKey = "<YOUR-ANON-KEY>"
+    static let supabaseURL     = "https://ipdyauprajeoyhhatiqm.supabase.co"
+    static let supabaseAnonKey = "sb_publishable_yqRjhiu9JE-ZDdYfer0skg_Op_Dc1p-"
     #endif
 
     // MARK: - Usage Limits

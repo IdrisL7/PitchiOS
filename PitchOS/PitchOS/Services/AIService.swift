@@ -81,7 +81,8 @@ final class AIService: Sendable {
             "userPrompt": Prompts.DiscoveryQuestions.userPrompt(
                 dealContext: deal?.contextString,
                 vertical: profile.vertical,
-                methodology: profile.methodology
+                methodology: profile.methodology,
+                methodologyGuidance: profile.salesMethodology.promptGuidance
             ),
             "promptVersion": Prompts.DiscoveryQuestions.version
         ]

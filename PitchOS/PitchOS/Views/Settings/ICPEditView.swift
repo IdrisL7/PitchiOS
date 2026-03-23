@@ -34,16 +34,7 @@ struct ICPEditView: View {
                     }
                 }
 
-                fieldCard("Sales Methodology") {
-                    Picker("Methodology", selection: $viewModel.profile.methodology) {
-                        ForEach(OnboardingViewModel.methodologies, id: \.self) { method in
-                            Text(method).tag(method)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                    .tint(Color.pitchAccent)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
+                MethodologyPickerSection(methodology: $viewModel.profile.methodology)
 
                 if let error = viewModel.error {
                     Text(error)

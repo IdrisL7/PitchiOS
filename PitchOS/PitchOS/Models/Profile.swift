@@ -60,6 +60,11 @@ struct Profile: Codable, Identifiable, Sendable {
         SalesVertical(rawValue: vertical) ?? .enterprise
     }
 
+    /// Typed access to the stored methodology string.
+    var salesMethodology: SalesMethodology {
+        SalesMethodology(rawValue: methodology) ?? .meddic
+    }
+
     enum CodingKeys: String, CodingKey {
         case id, name, role, product, industries, plan, vertical
         case buyerTitles    = "buyer_titles"
@@ -142,6 +147,9 @@ struct Profile: Codable, Identifiable, Sendable {
         - Primary buyer titles: \(buyerTitles.joined(separator: ", "))
         - Sales methodology: \(methodology)
         - Top 3 differentiators: \(differentiators.joined(separator: "; "))
+
+        Methodology guidance:
+        \(salesMethodology.promptGuidance)
         """
     }
 }

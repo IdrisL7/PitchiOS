@@ -144,7 +144,7 @@ enum Prompts {
     enum DiscoveryQuestions {
         static let version = "questions_v1.4"
 
-        static func userPrompt(dealContext: String?, vertical: String, methodology: String) -> String {
+        static func userPrompt(dealContext: String?, vertical: String, methodology: String, methodologyGuidance: String) -> String {
             """
             Generate a discovery question bank for this prospect meeting.
 
@@ -152,12 +152,15 @@ enum Prompts {
             Sales vertical: \(vertical)
             Sales methodology: \(methodology)
 
+            Methodology application:
+            \(methodologyGuidance)
+
             PINNED QUESTION — always include this as Question 1. It is the single most powerful \
             closing question for any automation or efficiency sale. Never omit it:
             "If you don't solve this problem, what does that look like 12 months from now?"
 
             Generate 14 additional questions tailored to this specific prospect. \
-            Questions should progress through the \(methodology) framework. \
+            Questions should progress through the \(methodology) framework per the guidance above. \
             Calibrate to the prospect's role — a VP asks about outcomes and ROI, \
             a manager asks about process and team impact.
 

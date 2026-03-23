@@ -89,7 +89,7 @@ enum VerticalTemplates {
             "We need to think about it",
             "Our team already has a process"
         ],
-        methodology: "MEDDIC"
+        methodology: SalesMethodology.meddic.rawValue
     )
 
     // MARK: Recruitment
@@ -124,7 +124,7 @@ enum VerticalTemplates {
             "We tried automation before and it felt impersonal",
             "What if it breaks during a live campaign?"
         ],
-        methodology: "SPIN"
+        methodology: SalesMethodology.spin.rawValue
     )
 
     // MARK: Accountancy
@@ -159,7 +159,7 @@ enum VerticalTemplates {
             "It's too expensive for a firm our size",
             "We need to think about it — it's a busy period"
         ],
-        methodology: "SPIN"
+        methodology: SalesMethodology.spin.rawValue
     )
 
     // MARK: Estate Agents
@@ -194,7 +194,7 @@ enum VerticalTemplates {
             "It's too expensive for our branch size",
             "We tried something like this before and it didn't work"
         ],
-        methodology: "SPIN"
+        methodology: SalesMethodology.spin.rawValue
     )
 
     // MARK: eCommerce
@@ -229,7 +229,7 @@ enum VerticalTemplates {
             "Our data is too messy to automate",
             "We need to think about it — we're in a busy trading period"
         ],
-        methodology: "SPIN"
+        methodology: SalesMethodology.spin.rawValue
     )
 
     // MARK: Marketing Agency
@@ -264,7 +264,7 @@ enum VerticalTemplates {
             "It's too expensive to set up for each client",
             "We tried a dashboard tool before and clients didn't use it"
         ],
-        methodology: "SPIN"
+        methodology: SalesMethodology.spin.rawValue
     )
 
     // MARK: AI Services / Agency
@@ -303,7 +303,7 @@ enum VerticalTemplates {
             "We need to think about it",
             "What if it breaks?"
         ],
-        methodology: "SPIN"
+        methodology: SalesMethodology.sandler.rawValue
     )
 }
 
