@@ -73,13 +73,7 @@ struct LoginView: View {
 
                     #if DEBUG
                     Button("⚡ Dev Login") {
-                        Task {
-                            vm.email = "test@pitchos.dev"
-                            vm.password = "PitchOS123x"
-                            if await vm.signIn() {
-                                await appState.loadSession()
-                            }
-                        }
+                        appState.devBypass()
                     }
                     .font(.caption)
                     .foregroundStyle(.secondary)
