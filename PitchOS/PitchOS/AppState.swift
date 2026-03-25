@@ -76,34 +76,60 @@ final class AppState {
         isLoading = true
 
         #if DEBUG
-        // Auto-login with test account — sign-in result used directly
-        if currentUser == nil {
-            if let session = try? await supabase.auth.signIn(
-                email: "test@pitchos.dev",
-                password: "PitchOS123x"
-            ) {
-                currentUser = session.user
-                profile = try? await profileService.fetchProfile(userId: session.user.id)
-                isLoading = false
-                return
-            }
-        }
+        devBypass()
+        return
         #endif
 
+        // Stage 1: Restore auth session (fatal — no session means go to login)
         do {
             let session = try await supabase.auth.session
             currentUser = session.user
-
-            if let userId = currentUser?.id {
-                profile = try await profileService.fetchProfile(userId: userId)
-            }
         } catch {
             currentUser = nil
             profile = nil
+            isLoading = false
+            return
+        }
+
+        // Stage 2: Load profile (non-fatal — new users have no profile yet)
+        if let userId = currentUser?.id {
+            profile = try? await profileService.fetchProfile(userId: userId)
         }
 
         isLoading = false
     }
+
+    #if DEBUG
+    /// Bypasses auth entirely for screenshots/testing — no server call needed
+    func devBypass() {
+        isLoading = false
+        // Satisfy isAuthenticated check without a real Supabase session
+        currentUser = User(
+            id: UUID(),
+            appMetadata: [:],
+            userMetadata: [:],
+            aud: "authenticated",
+            createdAt: Date(),
+            updatedAt: Date()
+        )
+        profile = Profile(
+            id: UUID(),
+            name: "Sarah Chen",
+            role: "Solutions Engineer",
+            product: "DataSync — real-time data integration for enterprise finance",
+            industries: ["FinTech", "HRTech"],
+            buyerTitles: ["VP Engineering", "CTO"],
+            methodology: "MEDDIC",
+            differentiators: [
+                "Sub-100ms real-time sync",
+                "No-code integration builder",
+                "SOC 2 Type II certified"
+            ],
+            createdAt: Date(),
+            updatedAt: Date()
+        )
+    }
+    #endif
 
     /// For SwiftUI previews
     static var preview: AppState {
