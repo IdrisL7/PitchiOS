@@ -33,7 +33,7 @@ final class HapticService: Sendable {
 
     // MARK: - Private
 
-    private func fire(_ block: @escaping @Sendable () -> Void) {
-        DispatchQueue.main.async { block() }
+    private func fire(_ block: @escaping @MainActor @Sendable () -> Void) {
+        Task { @MainActor in block() }
     }
 }

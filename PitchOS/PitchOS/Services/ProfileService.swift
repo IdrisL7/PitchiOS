@@ -21,7 +21,7 @@ final class ProfileService: Sendable {
     func createProfile(_ profile: Profile) async throws -> Profile {
         try await client
             .from("profiles")
-            .insert(profile)
+            .upsert(profile, onConflict: "id")
             .select()
             .single()
             .execute()
