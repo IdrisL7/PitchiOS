@@ -68,7 +68,7 @@ struct Profile: Codable, Identifiable, Sendable {
     enum CodingKeys: String, CodingKey {
         case id, name, role, product, industries, plan, vertical
         case buyerTitles    = "buyer_titles"
-        case methodology    = "methodologies"
+        case methodology
         case differentiators
         case teamName       = "team_name"
         case teamSeatCount  = "team_seat_count"
