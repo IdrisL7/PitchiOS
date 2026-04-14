@@ -35,13 +35,14 @@ struct MeetingBriefView: View {
                         Task { await vm.generate() }
                     }
 
-                    // Error
+                    // Error (inline + alert)
                     if let error = vm.error {
                         Text(error)
                             .font(.caption)
                             .foregroundStyle(Color.pitchDanger)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
+
 
                     // Output card
                     if vm.hasContent || vm.isStreaming {
@@ -67,6 +68,14 @@ struct MeetingBriefView: View {
         .navigationTitle("Meeting Brief")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear { initViewModel() }
+        .alert("Error", isPresented: Binding(
+            get: { viewModel?.error != nil },
+            set: { if !$0 { viewModel?.error = nil } }
+        )) {
+            Button("OK") { viewModel?.error = nil }
+        } message: {
+            Text(viewModel?.error ?? "")
+        }
     }
 
     // MARK: - Sub-views
