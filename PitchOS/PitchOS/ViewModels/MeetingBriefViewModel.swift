@@ -32,7 +32,7 @@ final class MeetingBriefViewModel {
     var hasContent: Bool { !briefText.isEmpty }
 
     func generate() async {
-        guard await usageService.canGenerate(userId: profile.id) else {
+        guard await usageService.canGenerate(userId: profile.id, plan: profile.plan) else {
             error = UsageService.limitMessage
             HapticService.shared.error()
             return

@@ -36,7 +36,7 @@ final class ObjectionHandlerViewModel {
     func generateResponse() async {
         guard canGenerate else { return }
 
-        guard await usageService.canGenerate(userId: profile.id) else {
+        guard await usageService.canGenerate(userId: profile.id, plan: profile.plan) else {
             error = UsageService.limitMessage
             HapticService.shared.error()
             return

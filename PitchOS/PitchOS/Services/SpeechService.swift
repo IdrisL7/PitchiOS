@@ -12,17 +12,29 @@ final class SpeechService {
     private var audioEngine: AVAudioEngine?
     private var recognitionTask: SFSpeechRecognitionTask?
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
+    private var hasInstalledTap = false
 
     var isAuthorized: Bool {
         SFSpeechRecognizer.authorizationStatus() == .authorized
+            && AVAudioSession.sharedInstance().recordPermission == .granted
     }
 
     func requestAuthorization() async -> Bool {
-        await withCheckedContinuation { continuation in
+        let speechAuthorized = await withCheckedContinuation { continuation in
             SFSpeechRecognizer.requestAuthorization { status in
                 continuation.resume(returning: status == .authorized)
             }
         }
+
+        guard speechAuthorized else { return false }
+
+        let microphoneAuthorized = await withCheckedContinuation { continuation in
+            AVAudioSession.sharedInstance().requestRecordPermission { granted in
+                continuation.resume(returning: granted)
+            }
+        }
+
+        return microphoneAuthorized
     }
 
     func startRecording() throws {
@@ -41,6 +53,9 @@ final class SpeechService {
         try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
         try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
 
+        transcript = ""
+        error = nil
+
         let request = SFSpeechAudioBufferRecognitionRequest()
         request.shouldReportPartialResults = true
         request.addsPunctuation = true
@@ -54,6 +69,7 @@ final class SpeechService {
         inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
             request.append(buffer)
         }
+        hasInstalledTap = true
 
         audioEngine.prepare()
         try audioEngine.start()
@@ -78,9 +94,13 @@ final class SpeechService {
 
     func stopRecording() {
         audioEngine?.stop()
-        audioEngine?.inputNode.removeTap(onBus: 0)
+        if hasInstalledTap {
+            audioEngine?.inputNode.removeTap(onBus: 0)
+            hasInstalledTap = false
+        }
         recognitionRequest?.endAudio()
         recognitionTask?.cancel()
+        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
 
         audioEngine = nil
         recognitionRequest = nil

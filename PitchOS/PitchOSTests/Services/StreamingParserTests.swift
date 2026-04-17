@@ -110,4 +110,25 @@ struct AIServiceTests {
         let error = AIServiceError.serverError(statusCode: 200, detail: #"{"error":"Missing Claude API key"}"#)
         #expect(error.errorDescription == #"Server error (HTTP 200): {"error":"Missing Claude API key"}"#)
     }
+
+    @Test("Maps 401 responses to unauthorized")
+    func mapsUnauthorizedStatusCode() {
+        let error = AIService.responseError(statusCode: 401)
+        guard case .unauthorized = error else {
+            Issue.record("Expected unauthorized for HTTP 401, got \(error).")
+            return
+        }
+    }
+
+    @Test("Preserves detail for non-auth server errors")
+    func preservesServerErrorDetailFromStatusMapper() {
+        let error = AIService.responseError(statusCode: 500, detail: "upstream failed")
+        guard case .serverError(let statusCode, let detail) = error else {
+            Issue.record("Expected serverError for HTTP 500, got \(error).")
+            return
+        }
+
+        #expect(statusCode == 500)
+        #expect(detail == "upstream failed")
+    }
 }

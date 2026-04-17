@@ -81,7 +81,7 @@ final class PostCallViewModel {
     func generateSummary() async {
         guard canGenerateSummary else { return }
 
-        guard await usageService.canGenerate(userId: profile.id) else {
+        guard await usageService.canGenerate(userId: profile.id, plan: profile.plan) else {
             error = UsageService.limitMessage
             HapticService.shared.error()
             return
@@ -135,7 +135,7 @@ final class PostCallViewModel {
     func generateFollowUpEmail() async {
         guard canGenerateEmail else { return }
 
-        guard await usageService.canGenerate(userId: profile.id) else {
+        guard await usageService.canGenerate(userId: profile.id, plan: profile.plan) else {
             error = UsageService.limitMessage
             HapticService.shared.error()
             return

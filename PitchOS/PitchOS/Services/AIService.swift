@@ -126,7 +126,9 @@ final class AIService: Sendable {
                         url: URL(string: "\(AppConfig.supabaseURL)/functions/v1/\(functionName)")!
                     )
                     request.httpMethod = "POST"
+                    request.setValue(AppConfig.supabaseAnonKey, forHTTPHeaderField: "apikey")
                     request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+                    request.setValue("text/event-stream", forHTTPHeaderField: "Accept")
                     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                     request.httpBody = try JSONEncoder().encode(body)
 
@@ -137,10 +139,11 @@ final class AIService: Sendable {
                     }
 
                     guard httpResponse.statusCode == 200 else {
-                        if httpResponse.statusCode == 429 {
-                            throw AIServiceError.quotaExceeded
-                        }
-                        throw AIServiceError.serverError(statusCode: httpResponse.statusCode)
+                        let detail = try await Self.readFirstMeaningfulLine(from: bytes)
+                        throw Self.responseError(
+                            statusCode: httpResponse.statusCode,
+                            detail: detail
+                        )
                     }
 
                     let contentType = httpResponse.value(forHTTPHeaderField: "Content-Type")
@@ -187,6 +190,17 @@ final class AIService: Sendable {
     static func validateCompletedStream(_ chunksYielded: Int) throws {
         guard chunksYielded > 0 else {
             throw AIServiceError.invalidResponse
+        }
+    }
+
+    static func responseError(statusCode: Int, detail: String = "") -> AIServiceError {
+        switch statusCode {
+        case 401:
+            return .unauthorized
+        case 429:
+            return .quotaExceeded
+        default:
+            return .serverError(statusCode: statusCode, detail: detail)
         }
     }
 
