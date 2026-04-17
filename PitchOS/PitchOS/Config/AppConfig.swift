@@ -3,13 +3,17 @@ import Foundation
 enum AppConfig {
     // MARK: - Supabase
     //
-    // Development:  uses local Supabase stack (`supabase start`)
-    // Production:   swap these for your Supabase project values from
-    //               https://supabase.com/dashboard → Project Settings → API
+    // Debug:      uses local Supabase stack (`supabase start`)
+    // DevRemote:  uses the hosted Supabase project with real auth while staying
+    //             out of Release builds
+    // Production: same hosted project used by TestFlight/App Store
     //
     #if DEBUG
     static let supabaseURL     = "http://127.0.0.1:54321"
     static let supabaseAnonKey = "sb_publishable_ACJWlzQHlZjBrEguHvfOxg_3BJgxAaH"
+    #elseif DEV_REMOTE
+    static let supabaseURL     = "https://ipdyauprajeoyhhatiqm.supabase.co"
+    static let supabaseAnonKey = "sb_publishable_yqRjhiu9JE-ZDdYfer0skg_Op_Dc1p-"
     #else
     static let supabaseURL     = "https://ipdyauprajeoyhhatiqm.supabase.co"
     static let supabaseAnonKey = "sb_publishable_yqRjhiu9JE-ZDdYfer0skg_Op_Dc1p-"

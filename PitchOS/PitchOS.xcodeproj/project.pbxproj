@@ -683,9 +683,9 @@
 			};
 			name = Release;
 		};
-		3259315A2AB0315D72CED0E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+			3259315A2AB0315D72CED0E8 /* Debug */ = {
+				isa = XCBuildConfiguration;
+				buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 8;
@@ -709,12 +709,42 @@
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				};
+				name = Debug;
 			};
-			name = Debug;
-		};
-		6E74EBAA0AFDC535E9981A10 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+			3F20D1A14E8B4C3A9D1E7F01 /* DevRemote */ = {
+				isa = XCBuildConfiguration;
+				buildSettings = {
+					ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+					CODE_SIGN_IDENTITY = "iPhone Developer";
+					CURRENT_PROJECT_VERSION = 8;
+					DEVELOPMENT_TEAM = JFJ5GC836U;
+					GENERATE_INFOPLIST_FILE = YES;
+					INFOPLIST_KEY_CFBundleDisplayName = PitchOS;
+					INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+					INFOPLIST_KEY_NSMicrophoneUsageDescription = "PitchOS uses the microphone for voice-to-text note capture during calls.";
+					INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "PitchOS uses speech recognition to transcribe your call notes.";
+					INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+					INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+					INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+					LD_RUNPATH_SEARCH_PATHS = (
+						"$(inherited)",
+						"@executable_path/Frameworks",
+					);
+					MARKETING_VERSION = 1.0.1;
+					PRODUCT_BUNDLE_IDENTIFIER = com.pitchos.PitchOS;
+					SDKROOT = iphoneos;
+					SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+					SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV_REMOTE;
+					SWIFT_STRICT_CONCURRENCY = complete;
+					SWIFT_VERSION = 6.0;
+					TARGETED_DEVICE_FAMILY = "1,2";
+				};
+				name = DevRemote;
+			};
+			6E74EBAA0AFDC535E9981A10 /* Debug */ = {
+				isa = XCBuildConfiguration;
+				buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = JFJ5GC836U;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -728,12 +758,32 @@
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PitchOS.app/PitchOS";
+				};
+				name = Debug;
 			};
-			name = Debug;
-		};
-		D5FD8CD83A21C149297483C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+			7C91B2D34A6E5F708192A3B4 /* DevRemote */ = {
+				isa = XCBuildConfiguration;
+				buildSettings = {
+					BUNDLE_LOADER = "$(TEST_HOST)";
+					DEVELOPMENT_TEAM = JFJ5GC836U;
+					GENERATE_INFOPLIST_FILE = YES;
+					LD_RUNPATH_SEARCH_PATHS = (
+						"$(inherited)",
+						"@executable_path/Frameworks",
+						"@loader_path/Frameworks",
+					);
+					PRODUCT_BUNDLE_IDENTIFIER = com.pitchos.PitchOSTests;
+					SDKROOT = iphoneos;
+					SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV_REMOTE;
+					SWIFT_VERSION = 6.0;
+					TARGETED_DEVICE_FAMILY = "1,2";
+					TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PitchOS.app/PitchOS";
+				};
+				name = DevRemote;
+			};
+			D5FD8CD83A21C149297483C2 /* Debug */ = {
+				isa = XCBuildConfiguration;
+				buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -791,12 +841,74 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				};
+				name = Debug;
 			};
-			name = Debug;
-		};
-		F465AB77BA3D47F11C2343A4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+			E4B9C6D71234567890ABCDEF /* DevRemote */ = {
+				isa = XCBuildConfiguration;
+				buildSettings = {
+					ALWAYS_SEARCH_USER_PATHS = NO;
+					CLANG_ANALYZER_NONNULL = YES;
+					CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+					CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+					CLANG_CXX_LIBRARY = "libc++";
+					CLANG_ENABLE_MODULES = YES;
+					CLANG_ENABLE_OBJC_ARC = YES;
+					CLANG_ENABLE_OBJC_WEAK = YES;
+					CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+					CLANG_WARN_BOOL_CONVERSION = YES;
+					CLANG_WARN_COMMA = YES;
+					CLANG_WARN_CONSTANT_CONVERSION = YES;
+					CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+					CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+					CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+					CLANG_WARN_EMPTY_BODY = YES;
+					CLANG_WARN_ENUM_CONVERSION = YES;
+					CLANG_WARN_INFINITE_RECURSION = YES;
+					CLANG_WARN_INT_CONVERSION = YES;
+					CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+					CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+					CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+					CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+					CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+					CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+					CLANG_WARN_STRICT_PROTOTYPES = YES;
+					CLANG_WARN_SUSPICIOUS_MOVE = YES;
+					CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+					CLANG_WARN_UNREACHABLE_CODE = YES;
+					CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+					COPY_PHASE_STRIP = NO;
+					DEBUG_INFORMATION_FORMAT = dwarf;
+					ENABLE_STRICT_OBJC_MSGSEND = YES;
+					ENABLE_TESTABILITY = YES;
+					GCC_C_LANGUAGE_STANDARD = gnu11;
+					GCC_DYNAMIC_NO_PIC = NO;
+					GCC_NO_COMMON_BLOCKS = YES;
+					GCC_OPTIMIZATION_LEVEL = 0;
+					GCC_PREPROCESSOR_DEFINITIONS = (
+						"$(inherited)",
+					);
+					GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+					GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+					GCC_WARN_UNDECLARED_SELECTOR = YES;
+					GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+					GCC_WARN_UNUSED_FUNCTION = YES;
+					GCC_WARN_UNUSED_VARIABLE = YES;
+					IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+					MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+					MTL_FAST_MATH = YES;
+					ONLY_ACTIVE_ARCH = YES;
+					PRODUCT_NAME = "$(TARGET_NAME)";
+					SDKROOT = iphoneos;
+					SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV_REMOTE;
+					SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+					SWIFT_VERSION = 5.0;
+				};
+				name = DevRemote;
+			};
+			F465AB77BA3D47F11C2343A4 /* Release */ = {
+				isa = XCBuildConfiguration;
+				buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -816,30 +928,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A32159FFC9243E61BFB90018 /* Build configuration list for PBXProject "PitchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5FD8CD83A21C149297483C2 /* Debug */,
-				136389B4C3DBA631D7C4A8F6 /* Release */,
-			);
+			A32159FFC9243E61BFB90018 /* Build configuration list for PBXProject "PitchOS" */ = {
+				isa = XCConfigurationList;
+				buildConfigurations = (
+					D5FD8CD83A21C149297483C2 /* Debug */,
+					E4B9C6D71234567890ABCDEF /* DevRemote */,
+					136389B4C3DBA631D7C4A8F6 /* Release */,
+				);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		A9179EC8FD721F4689C14781 /* Build configuration list for PBXNativeTarget "PitchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3259315A2AB0315D72CED0E8 /* Debug */,
-				297E3E7EC2F9FF9C71A11A74 /* Release */,
-			);
+			A9179EC8FD721F4689C14781 /* Build configuration list for PBXNativeTarget "PitchOS" */ = {
+				isa = XCConfigurationList;
+				buildConfigurations = (
+					3259315A2AB0315D72CED0E8 /* Debug */,
+					3F20D1A14E8B4C3A9D1E7F01 /* DevRemote */,
+					297E3E7EC2F9FF9C71A11A74 /* Release */,
+				);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		E27B7DD0E5F2AD91A16484A2 /* Build configuration list for PBXNativeTarget "PitchOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6E74EBAA0AFDC535E9981A10 /* Debug */,
-				F465AB77BA3D47F11C2343A4 /* Release */,
-			);
+			E27B7DD0E5F2AD91A16484A2 /* Build configuration list for PBXNativeTarget "PitchOSTests" */ = {
+				isa = XCConfigurationList;
+				buildConfigurations = (
+					6E74EBAA0AFDC535E9981A10 /* Debug */,
+					7C91B2D34A6E5F708192A3B4 /* DevRemote */,
+					F465AB77BA3D47F11C2343A4 /* Release */,
+				);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
