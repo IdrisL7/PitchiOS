@@ -7,8 +7,6 @@ struct ActionCard: View {
     let icon: String
     let gradient: [Color]
 
-    @State private var isPressed = false
-
     var body: some View {
         VStack(alignment: .leading, spacing: Spacing.sm) {
             // Icon badge
@@ -45,13 +43,6 @@ struct ActionCard: View {
         .frame(maxWidth: .infinity, minHeight: 120, alignment: .leading)
         .glassCard()
         .contentShape(RoundedRectangle(cornerRadius: Radius.md, style: .continuous))
-        .scaleEffect(isPressed ? 0.95 : 1.0)
-        .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isPressed)
-        .simultaneousGesture(
-            DragGesture(minimumDistance: 0)
-                .onChanged { _ in isPressed = true }
-                .onEnded { _ in isPressed = false }
-        )
     }
 }
 
