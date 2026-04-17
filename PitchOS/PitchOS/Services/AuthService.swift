@@ -39,4 +39,9 @@ final class AuthService: Sendable {
         let session = try await client.auth.session
         return session.accessToken
     }
+
+    /// Force a session refresh when an edge call rejects the current JWT.
+    func refreshSession() async throws -> Session {
+        try await client.auth.refreshSession()
+    }
 }

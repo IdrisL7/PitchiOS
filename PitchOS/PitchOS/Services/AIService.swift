@@ -115,62 +115,76 @@ final class AIService: Sendable {
         AsyncThrowingStream { continuation in
             let task = Task {
                 do {
-                    let token: String
+                    var token: String
                     do {
                         token = try await authService.accessToken()
                     } catch {
                         throw AIServiceError.unauthorized
                     }
 
-                    var request = URLRequest(
-                        url: URL(string: "\(AppConfig.supabaseURL)/functions/v1/\(functionName)")!
-                    )
-                    request.httpMethod = "POST"
-                    request.setValue(AppConfig.supabaseAnonKey, forHTTPHeaderField: "apikey")
-                    request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-                    request.setValue("text/event-stream", forHTTPHeaderField: "Accept")
-                    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                    request.httpBody = try JSONEncoder().encode(body)
-
-                    let (bytes, response) = try await URLSession.shared.bytes(for: request)
-
-                    guard let httpResponse = response as? HTTPURLResponse else {
-                        throw AIServiceError.invalidResponse
-                    }
-
-                    guard httpResponse.statusCode == 200 else {
-                        let detail = try await Self.readFirstMeaningfulLine(from: bytes)
-                        throw Self.responseError(
-                            statusCode: httpResponse.statusCode,
-                            detail: detail
+                    for attempt in 0..<2 {
+                        var request = URLRequest(
+                            url: URL(string: "\(AppConfig.supabaseURL)/functions/v1/\(functionName)")!
                         )
-                    }
+                        request.httpMethod = "POST"
+                        request.setValue(AppConfig.supabaseAnonKey, forHTTPHeaderField: "apikey")
+                        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+                        request.setValue("text/event-stream", forHTTPHeaderField: "Accept")
+                        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                        request.httpBody = try JSONEncoder().encode(body)
 
-                    let contentType = httpResponse.value(forHTTPHeaderField: "Content-Type")
-                    guard Self.isEventStream(contentType) else {
-                        let detail = try await Self.readFirstMeaningfulLine(from: bytes)
-                        throw AIServiceError.serverError(
-                            statusCode: httpResponse.statusCode,
-                            detail: detail
-                        )
-                    }
+                        let (bytes, response) = try await URLSession.shared.bytes(for: request)
 
-                    var chunksYielded = 0
-                    for try await line in bytes.lines {
-                        if Task.isCancelled { break }
+                        guard let httpResponse = response as? HTTPURLResponse else {
+                            throw AIServiceError.invalidResponse
+                        }
 
-                        if let chunk = StreamingParser.parse(line: line) {
-                            continuation.yield(chunk)
-                            chunksYielded += 1
-                            if chunk.isComplete {
-                                break
+                        if httpResponse.statusCode == 401, attempt == 0 {
+                            do {
+                                token = try await authService.refreshSession().accessToken
+                                continue
+                            } catch {
+                                throw AIServiceError.unauthorized
                             }
                         }
+
+                        guard httpResponse.statusCode == 200 else {
+                            let detail = try await Self.readFirstMeaningfulLine(from: bytes)
+                            throw Self.responseError(
+                                statusCode: httpResponse.statusCode,
+                                detail: detail
+                            )
+                        }
+
+                        let contentType = httpResponse.value(forHTTPHeaderField: "Content-Type")
+                        guard Self.isEventStream(contentType) else {
+                            let detail = try await Self.readFirstMeaningfulLine(from: bytes)
+                            throw AIServiceError.serverError(
+                                statusCode: httpResponse.statusCode,
+                                detail: detail
+                            )
+                        }
+
+                        var chunksYielded = 0
+                        for try await line in bytes.lines {
+                            if Task.isCancelled { break }
+
+                            if let chunk = StreamingParser.parse(line: line) {
+                                continuation.yield(chunk)
+                                chunksYielded += 1
+                                if chunk.isComplete {
+                                    break
+                                }
+                            }
+                        }
+
+                        try Self.validateCompletedStream(chunksYielded)
+
+                        continuation.finish()
+                        return
                     }
 
-                    try Self.validateCompletedStream(chunksYielded)
-
-                    continuation.finish()
+                    throw AIServiceError.unauthorized
                 } catch {
                     continuation.finish(throwing: error)
                 }
