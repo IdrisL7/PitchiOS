@@ -143,16 +143,30 @@ final class AIService: Sendable {
                         throw AIServiceError.serverError(statusCode: httpResponse.statusCode)
                     }
 
+                    let contentType = httpResponse.value(forHTTPHeaderField: "Content-Type")
+                    guard Self.isEventStream(contentType) else {
+                        let detail = try await Self.readFirstMeaningfulLine(from: bytes)
+                        throw AIServiceError.serverError(
+                            statusCode: httpResponse.statusCode,
+                            detail: detail
+                        )
+                    }
+
+                    var chunksYielded = 0
                     for try await line in bytes.lines {
                         if Task.isCancelled { break }
 
                         if let chunk = StreamingParser.parse(line: line) {
                             continuation.yield(chunk)
+                            chunksYielded += 1
                             if chunk.isComplete {
                                 break
                             }
                         }
                     }
+
+                    try Self.validateCompletedStream(chunksYielded)
+
                     continuation.finish()
                 } catch {
                     continuation.finish(throwing: error)
@@ -164,24 +178,52 @@ final class AIService: Sendable {
             }
         }
     }
+
+    static func isEventStream(_ contentType: String?) -> Bool {
+        guard let contentType else { return false }
+        return contentType.localizedCaseInsensitiveContains("text/event-stream")
+    }
+
+    static func validateCompletedStream(_ chunksYielded: Int) throws {
+        guard chunksYielded > 0 else {
+            throw AIServiceError.invalidResponse
+        }
+    }
+
+    static func readFirstMeaningfulLine(
+        from bytes: URLSession.AsyncBytes
+    ) async throws -> String {
+        for try await line in bytes.lines {
+            let trimmed = line.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !trimmed.isEmpty {
+                return trimmed
+            }
+        }
+
+        return ""
+    }
 }
 
 enum AIServiceError: LocalizedError {
     case invalidResponse
     case quotaExceeded
-    case serverError(statusCode: Int)
+    case serverError(statusCode: Int, detail: String = "")
     case unauthorized
 
     var errorDescription: String? {
         switch self {
         case .invalidResponse:
-            "Received an invalid response from the server."
+            return "Received an invalid response from the server."
         case .quotaExceeded:
-            "You've reached your monthly generation limit. Upgrade to continue."
-        case .serverError(let code):
-            "Server error (HTTP \(code)). Please try again."
+            return "You've reached your monthly generation limit. Upgrade to continue."
+        case .serverError(let code, let detail):
+            let trimmedDetail = detail.trimmingCharacters(in: .whitespacesAndNewlines)
+            if trimmedDetail.isEmpty {
+                return "Server error (HTTP \(code)). Please try again."
+            }
+            return "Server error (HTTP \(code)): \(trimmedDetail)"
         case .unauthorized:
-            "Your session has expired. Please sign in again."
+            return "Your session has expired. Please sign in again."
         }
     }
 }

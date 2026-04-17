@@ -68,3 +68,46 @@ struct StreamingParserTests {
         #expect(chunk?.text == "**Acknowledge**: That's a fair point — pricing matters.")
     }
 }
+
+@Suite("AIService")
+struct AIServiceTests {
+
+    @Test("Recognizes SSE content type")
+    func recognizesEventStreamContentType() {
+        #expect(AIService.isEventStream("text/event-stream"))
+        #expect(AIService.isEventStream("text/event-stream; charset=utf-8"))
+        #expect(AIService.isEventStream("TEXT/EVENT-STREAM"))
+    }
+
+    @Test("Rejects non-SSE content types")
+    func rejectsNonEventStreamContentType() {
+        #expect(AIService.isEventStream("application/json") == false)
+        #expect(AIService.isEventStream(nil) == false)
+    }
+
+    @Test("Throws invalid response for empty streams")
+    func rejectsEmptyStream() throws {
+        do {
+            try AIService.validateCompletedStream(0)
+            Issue.record("Expected validateCompletedStream to throw for an empty stream.")
+        } catch let error as AIServiceError {
+            guard case .invalidResponse = error else {
+                Issue.record("Expected invalidResponse, got \(error).")
+                return
+            }
+        } catch {
+            Issue.record("Expected AIServiceError.invalidResponse, got \(error).")
+        }
+    }
+
+    @Test("Allows non-empty streams")
+    func acceptsNonEmptyStream() throws {
+        try AIService.validateCompletedStream(1)
+    }
+
+    @Test("Includes server error detail when available")
+    func includesServerErrorDetail() {
+        let error = AIServiceError.serverError(statusCode: 200, detail: #"{"error":"Missing Claude API key"}"#)
+        #expect(error.errorDescription == #"Server error (HTTP 200): {"error":"Missing Claude API key"}"#)
+    }
+}
