@@ -155,7 +155,7 @@ struct GenerateView: View {
                             subtitle: tool.subtitle,
                             icon: tool.icon,
                             gradient: tool.gradient
-                        ) {}
+                        )
                     }
                     .buttonStyle(.plain)
                 }

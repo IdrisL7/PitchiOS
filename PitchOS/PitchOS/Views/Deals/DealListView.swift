@@ -78,20 +78,41 @@ struct DealListView: View {
 
     @ViewBuilder
     private func dealList(_ vm: DealListViewModel) -> some View {
-        ScrollView {
-            LazyVStack(spacing: Spacing.sm) {
+        List {
+            Section {
                 ForEach(vm.deals) { deal in
                     NavigationLink(value: deal) {
                         DealRow(deal: deal)
                     }
                     .buttonStyle(.plain)
+                    .listRowInsets(EdgeInsets(
+                        top: Spacing.xs,
+                        leading: Spacing.md,
+                        bottom: Spacing.xs,
+                        trailing: Spacing.md
+                    ))
+                    .listRowBackground(Color.clear)
+                    .swipeActions(edge: .trailing, allowsFullSwipe: true) {
+                        Button(role: .destructive) {
+                            Task { await vm.deleteDeal(deal) }
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
+                    }
                 }
             }
-            .padding(.horizontal, Spacing.md)
-            .padding(.top, Spacing.sm)
-            .padding(.bottom, 100) // clearance for floating tab bar
         }
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
         .refreshable { await vm.loadDeals() }
+        .alert("Error", isPresented: Binding(
+            get: { vm.error != nil },
+            set: { if !$0 { vm.error = nil } }
+        )) {
+            Button("OK") { vm.error = nil }
+        } message: {
+            Text(vm.error ?? "")
+        }
     }
 }
 

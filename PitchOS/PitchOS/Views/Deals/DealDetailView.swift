@@ -121,7 +121,7 @@ struct DealDetailView: View {
                     subtitle: "Pre-call prospect snapshot",
                     icon: "doc.badge.gearshape.fill",
                     gradient: [Color.pitchSuccess, Color(red: 0.10, green: 0.70, blue: 0.45)]
-                ) {}
+                )
             }
             .buttonStyle(.plain)
 
@@ -133,7 +133,7 @@ struct DealDetailView: View {
                     subtitle: "15 tailored questions",
                     icon: "questionmark.bubble.fill",
                     gradient: [Color.pitchAccent, Color.pitchPurple]
-                ) {}
+                )
             }
             .buttonStyle(.plain)
 
@@ -145,7 +145,7 @@ struct DealDetailView: View {
                     subtitle: "Counter objections live",
                     icon: "bolt.fill",
                     gradient: [Color.pitchWarning, Color(red: 1.0, green: 0.5, blue: 0.1)]
-                ) {}
+                )
             }
             .buttonStyle(.plain)
 
@@ -157,7 +157,7 @@ struct DealDetailView: View {
                     subtitle: "Notes, summary & email",
                     icon: "doc.text.fill",
                     gradient: [Color.pitchPurple, Color(red: 0.75, green: 0.30, blue: 0.90)]
-                ) {}
+                )
             }
             .buttonStyle(.plain)
         }
