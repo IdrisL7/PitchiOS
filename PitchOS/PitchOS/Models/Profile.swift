@@ -4,12 +4,14 @@ import Foundation
 
 enum UserPlan: String, Codable, Sendable, CaseIterable {
     case free = "free"
+    case solo = "solo"
     case pro  = "pro"
     case team = "team"
 
     var displayName: String {
         switch self {
         case .free: return "Free"
+        case .solo: return "Solo"
         case .pro:  return "Pro"
         case .team: return "Team"
         }
@@ -18,18 +20,19 @@ enum UserPlan: String, Codable, Sendable, CaseIterable {
     var icon: String {
         switch self {
         case .free: return "person.fill"
+        case .solo: return "person.crop.circle.fill"
         case .pro:  return "bolt.fill"
         case .team: return "person.3.fill"
         }
     }
 
     /// `true` for paid plans — no generation cap.
-    var isUnlimited: Bool { self == .pro || self == .team }
+    var isUnlimited: Bool { self == .solo || self == .pro || self == .team }
 
     var monthlyLimit: Int {
         switch self {
         case .free: return AppConfig.freeGenerationsPerMonth
-        case .pro, .team: return Int.max
+        case .solo, .pro, .team: return Int.max
         }
     }
 }

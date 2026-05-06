@@ -80,9 +80,6 @@ final class DiscoveryQuestionsViewModel {
     private func handleError(_ error: Error) {
         self.error = error.friendlyMessage
         HapticService.shared.error()
-        if error.isSessionExpired {
-            NotificationCenter.default.post(name: .sessionExpired, object: nil)
-        }
     }
 
     func rate(_ rating: Int) async {

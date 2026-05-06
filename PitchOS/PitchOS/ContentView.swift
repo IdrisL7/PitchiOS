@@ -11,6 +11,24 @@ struct ContentView: View {
                 LoginView()
             } else if !appState.isOnboarded {
                 OnboardingContainerView()
+            } else if ProcessInfo.processInfo.arguments.contains("--screenshot-generate") {
+                #if DEBUG
+                GenerateView()
+                #else
+                MainTabView()
+                #endif
+            } else if ProcessInfo.processInfo.arguments.contains("--screenshot-postcall") {
+                #if DEBUG
+                NavigationStack { PostCallView() }
+                #else
+                MainTabView()
+                #endif
+            } else if ProcessInfo.processInfo.arguments.contains("--screenshot-settings") {
+                #if DEBUG
+                SettingsView()
+                #else
+                MainTabView()
+                #endif
             } else {
                 MainTabView()
             }

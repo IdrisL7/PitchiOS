@@ -119,7 +119,11 @@ final class AIService: Sendable {
                     do {
                         token = try await authService.accessToken()
                     } catch {
-                        throw AIServiceError.unauthorized
+                        do {
+                            token = try await authService.refreshSession().accessToken
+                        } catch {
+                            throw AIServiceError.unauthorized()
+                        }
                     }
 
                     for attempt in 0..<2 {
@@ -144,7 +148,8 @@ final class AIService: Sendable {
                                 token = try await authService.refreshSession().accessToken
                                 continue
                             } catch {
-                                throw AIServiceError.unauthorized
+                                let detail = try await Self.readFirstMeaningfulLine(from: bytes)
+                                throw AIServiceError.unauthorized(detail: detail)
                             }
                         }
 
@@ -184,7 +189,7 @@ final class AIService: Sendable {
                         return
                     }
 
-                    throw AIServiceError.unauthorized
+                    throw AIServiceError.unauthorized()
                 } catch {
                     continuation.finish(throwing: error)
                 }
@@ -210,7 +215,7 @@ final class AIService: Sendable {
     static func responseError(statusCode: Int, detail: String = "") -> AIServiceError {
         switch statusCode {
         case 401:
-            return .unauthorized
+            return .unauthorized(detail: detail)
         case 429:
             return .quotaExceeded
         default:
@@ -236,7 +241,7 @@ enum AIServiceError: LocalizedError {
     case invalidResponse
     case quotaExceeded
     case serverError(statusCode: Int, detail: String = "")
-    case unauthorized
+    case unauthorized(detail: String = "")
 
     var errorDescription: String? {
         switch self {
@@ -250,8 +255,12 @@ enum AIServiceError: LocalizedError {
                 return "Server error (HTTP \(code)). Please try again."
             }
             return "Server error (HTTP \(code)): \(trimmedDetail)"
-        case .unauthorized:
-            return "Your session has expired. Please sign in again."
+        case .unauthorized(let detail):
+            let trimmedDetail = detail.trimmingCharacters(in: .whitespacesAndNewlines)
+            if trimmedDetail.isEmpty {
+                return "Authentication failed. Please sign out and sign back in."
+            }
+            return "Authentication failed: \(trimmedDetail)"
         }
     }
 }

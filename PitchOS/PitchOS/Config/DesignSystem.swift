@@ -40,6 +40,7 @@ extension UserPlan {
     var badgeColors: [Color] {
         switch self {
         case .free: return []
+        case .solo: return [Color.pitchAccent, Color.pitchPurple]
         case .pro:  return [Color.pitchAccent, Color.pitchPurple]
         case .team: return [Color.pitchSuccess, Color(red: 0.10, green: 0.70, blue: 0.45)]
         }

@@ -32,7 +32,7 @@ final class UsageService: Sendable {
     }
 
     /// Returns `false` when the user has hit the monthly cap for their plan.
-    /// Pro is always `true` (unlimited). Errors fail open.
+    /// Paid plans are unlimited. Errors fail open.
     func canGenerate(userId: UUID, plan: UserPlan = .free) async -> Bool {
         guard !plan.isUnlimited else { return true }
         guard let usage = try? await currentUsage(userId: userId) else { return true }

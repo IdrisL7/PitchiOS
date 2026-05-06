@@ -1,9 +1,11 @@
+import StoreKit
 import SwiftUI
 
 struct SettingsView: View {
     @Environment(AppState.self) private var appState
     @State private var viewModel: SettingsViewModel?
     @State private var usageCount: Int?
+    @State private var purchaseService = PurchaseService()
 
     var body: some View {
         NavigationStack {
@@ -11,8 +13,9 @@ struct SettingsView: View {
                 ScrollView {
                     VStack(spacing: Spacing.md) {
                         profileCard(vm)
-
                         usageCard
+
+                        subscriptionCard(vm)
 
                         if vm.profile.plan == .team {
                             teamCard(vm.profile)
@@ -29,7 +32,9 @@ struct SettingsView: View {
                         appearanceCard
 
                         #if DEBUG
-                        debugSimulatorCard
+                        if !isScreenshotMode {
+                            debugSimulatorCard
+                        }
                         #endif
 
                         VStack(spacing: Spacing.sm) {
@@ -87,6 +92,161 @@ struct SettingsView: View {
                 }
             }
         }
+    }
+
+    #if DEBUG
+    private var isScreenshotMode: Bool {
+        ProcessInfo.processInfo.arguments.contains("--screenshot-settings")
+    }
+    #else
+    private var isScreenshotMode: Bool { false }
+    #endif
+
+    private func applyPurchasedPlan(_ plan: UserPlan, to vm: SettingsViewModel) async {
+        guard vm.profile.plan != plan else { return }
+
+        do {
+            let updatedProfile = try await appState.profileService.updatePlan(userId: vm.profile.id, plan: plan)
+            vm.profile = updatedProfile
+            appState.profile = updatedProfile
+            usageCount = try? await appState.usageService.currentUsage(userId: updatedProfile.id)
+        } catch {
+            purchaseService.error = "Your purchase completed, but we could not update your account. Please contact support."
+        }
+    }
+
+    // MARK: - Subscriptions
+
+    private func subscriptionCard(_ vm: SettingsViewModel) -> some View {
+        VStack(alignment: .leading, spacing: Spacing.sm) {
+            HStack {
+                Label("Subscription", systemImage: "creditcard.fill")
+                    .font(.rounded(.footnote, weight: .semibold))
+                    .foregroundStyle(.secondary)
+                Spacer()
+                if vm.profile.plan.isUnlimited {
+                    Label(vm.profile.plan.displayName, systemImage: vm.profile.plan.icon)
+                        .font(.rounded(.caption, weight: .semibold))
+                        .foregroundStyle(Color.pitchAccent)
+                }
+            }
+
+            if purchaseService.isLoading {
+                ProgressView().tint(Color.pitchAccent)
+                    .frame(maxWidth: .infinity, alignment: .center)
+            } else if purchaseService.products.isEmpty {
+                #if DEBUG
+                if isScreenshotMode {
+                    subscriptionScreenshotRows
+                } else {
+                    Text("Subscriptions are being prepared in App Store Connect.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                #else
+                Text("Subscriptions are being prepared in App Store Connect.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                #endif
+            } else {
+                VStack(spacing: Spacing.xs) {
+                    ForEach(purchaseService.products, id: \.id) { product in
+                        let plan = PurchaseService.plan(for: product.id) ?? .solo
+                        Button {
+                            Task {
+                                do {
+                                    if let purchasedPlan = try await purchaseService.purchase(product) {
+                                        await applyPurchasedPlan(purchasedPlan, to: vm)
+                                    }
+                                } catch {
+                                    purchaseService.error = error.localizedDescription
+                                }
+                            }
+                        } label: {
+                            HStack(spacing: Spacing.sm) {
+                                Image(systemName: plan.icon)
+                                    .frame(width: 24)
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(product.displayName.isEmpty ? plan.displayName : product.displayName)
+                                        .font(.rounded(.subheadline, weight: .semibold))
+                                    Text("Unlimited AI generations")
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                                Spacer()
+                                Text(product.displayPrice)
+                                    .font(.rounded(.subheadline, weight: .bold))
+                            }
+                            .padding(.vertical, 10)
+                            .padding(.horizontal, 12)
+                            .background(Color.pitchAccent.opacity(0.10))
+                            .clipShape(RoundedRectangle(cornerRadius: Radius.md, style: .continuous))
+                        }
+                        .buttonStyle(.plain)
+                        .disabled(purchaseService.isPurchasing)
+                    }
+                }
+            }
+
+            Button {
+                Task {
+                    do {
+                        if let restoredPlan = try await purchaseService.restorePurchases() {
+                            await applyPurchasedPlan(restoredPlan, to: vm)
+                        }
+                    } catch {
+                        purchaseService.error = error.localizedDescription
+                    }
+                }
+            } label: {
+                Text("Restore Purchases")
+                    .font(.rounded(.caption, weight: .semibold))
+                    .foregroundStyle(Color.pitchAccent)
+            }
+            .disabled(purchaseService.isPurchasing)
+
+            if let error = purchaseService.error {
+                Text(error)
+                    .font(.caption2)
+                    .foregroundStyle(Color.pitchDanger)
+            }
+        }
+        .padding(Spacing.md)
+        .glassCard()
+        .task {
+            await purchaseService.loadProducts()
+            if let purchasedPlan = purchaseService.purchasedPlan {
+                await applyPurchasedPlan(purchasedPlan, to: vm)
+            }
+        }
+    }
+
+    private var subscriptionScreenshotRows: some View {
+        VStack(spacing: Spacing.xs) {
+            screenshotSubscriptionRow(plan: .solo, title: "Solo Monthly", subtitle: "Unlimited AI generations for one user", price: "Monthly")
+            screenshotSubscriptionRow(plan: .pro, title: "Pro Monthly", subtitle: "Advanced AI sales call tools with unlimited generations", price: "Monthly")
+        }
+    }
+
+    private func screenshotSubscriptionRow(plan: UserPlan, title: String, subtitle: String, price: String) -> some View {
+        HStack(spacing: Spacing.sm) {
+            Image(systemName: plan.icon)
+                .frame(width: 24)
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title)
+                    .font(.rounded(.subheadline, weight: .semibold))
+                Text(subtitle)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            Spacer()
+            Text(price)
+                .font(.rounded(.subheadline, weight: .bold))
+        }
+        .padding(.vertical, 10)
+        .padding(.horizontal, 12)
+        .background(Color.pitchAccent.opacity(0.10))
+        .clipShape(RoundedRectangle(cornerRadius: Radius.md, style: .continuous))
     }
 
     // MARK: - Appearance Card

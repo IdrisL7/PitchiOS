@@ -55,7 +55,7 @@ final class PostCallViewModel {
 
     func toggleVoiceRecording() async {
         if speechService.isRecording {
-            speechService.stopRecording()
+            await speechService.stopRecording()
             if !speechService.transcript.isEmpty {
                 if !notesText.isEmpty { notesText += "\n" }
                 notesText += speechService.transcript
@@ -71,7 +71,9 @@ final class PostCallViewModel {
                 try speechService.startRecording()
                 isRecordingVoice = true
             } catch {
-                self.error = error.localizedDescription
+                speechService.cancelRecording()
+                isRecordingVoice = false
+                self.error = speechService.error ?? "Voice input could not start. Please type your notes instead."
             }
         }
     }
@@ -187,8 +189,5 @@ final class PostCallViewModel {
     private func handleError(_ error: Error) {
         self.error = error.friendlyMessage
         HapticService.shared.error()
-        if error.isSessionExpired {
-            NotificationCenter.default.post(name: .sessionExpired, object: nil)
-        }
     }
 }

@@ -43,4 +43,25 @@ final class ProfileService: Sendable {
             .execute()
             .value
     }
+
+    func updatePlan(userId: UUID, plan: UserPlan) async throws -> Profile {
+        struct PlanUpdate: Encodable {
+            let plan: String
+            let updatedAt: Date
+
+            enum CodingKeys: String, CodingKey {
+                case plan
+                case updatedAt = "updated_at"
+            }
+        }
+
+        return try await client
+            .from("profiles")
+            .update(PlanUpdate(plan: plan.rawValue, updatedAt: Date()))
+            .eq("id", value: userId.uuidString)
+            .select()
+            .single()
+            .execute()
+            .value
+    }
 }

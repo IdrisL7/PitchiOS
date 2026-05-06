@@ -1,0 +1,145 @@
+import Foundation
+import StoreKit
+
+@MainActor
+@Observable
+final class PurchaseService {
+    enum PurchaseError: LocalizedError {
+        case unknownProduct
+        case failedVerification
+
+        var errorDescription: String? {
+            switch self {
+            case .unknownProduct:
+                return "This subscription is not available yet."
+            case .failedVerification:
+                return "We could not verify this purchase. Please try again."
+            }
+        }
+    }
+
+    static let soloMonthlyProductID = "com.pitchos.PitchOS.solo.monthly"
+    static let proMonthlyProductID = "com.pitchos.PitchOS.pro.monthly"
+
+    private static let productIDs = [
+        soloMonthlyProductID,
+        proMonthlyProductID
+    ]
+
+    var products: [StoreKit.Product] = []
+    var purchasedPlan: UserPlan?
+    var isLoading = false
+    var isPurchasing = false
+    var error: String?
+
+    private var updatesTask: Task<Void, Never>?
+
+    init() {
+        updatesTask = listenForTransactions()
+    }
+
+    func loadProducts() async {
+        guard products.isEmpty else { return }
+
+        isLoading = true
+        error = nil
+        do {
+            let loadedProducts = try await StoreKit.Product.products(for: Self.productIDs)
+            products = loadedProducts.sorted { lhs, rhs in
+                Self.sortIndex(for: lhs.id) < Self.sortIndex(for: rhs.id)
+            }
+            await refreshPurchasedPlan()
+        } catch {
+            self.error = "Subscriptions are not available right now."
+        }
+        isLoading = false
+    }
+
+    func purchase(_ product: StoreKit.Product) async throws -> UserPlan? {
+        isPurchasing = true
+        error = nil
+        defer { isPurchasing = false }
+
+        let result = try await product.purchase()
+        switch result {
+        case .success(let verification):
+            let transaction = try checkVerified(verification)
+            await transaction.finish()
+            let plan = Self.plan(for: transaction.productID)
+            purchasedPlan = plan
+            return plan
+        case .userCancelled, .pending:
+            return nil
+        @unknown default:
+            return nil
+        }
+    }
+
+    func restorePurchases() async throws -> UserPlan? {
+        try await AppStore.sync()
+        await refreshPurchasedPlan()
+        return purchasedPlan
+    }
+
+    func refreshPurchasedPlan() async {
+        var bestPlan: UserPlan?
+
+        for await result in Transaction.currentEntitlements {
+            guard let transaction = try? checkVerified(result),
+                  let plan = Self.plan(for: transaction.productID)
+            else { continue }
+
+            if bestPlan == nil || plan.priority > bestPlan!.priority {
+                bestPlan = plan
+            }
+        }
+
+        purchasedPlan = bestPlan
+    }
+
+    static func plan(for productID: String) -> UserPlan? {
+        switch productID {
+        case soloMonthlyProductID: return .solo
+        case proMonthlyProductID: return .pro
+        default: return nil
+        }
+    }
+
+    private func listenForTransactions() -> Task<Void, Never> {
+        Task {
+            for await result in Transaction.updates {
+                guard let transaction = try? checkVerified(result) else { continue }
+                purchasedPlan = Self.plan(for: transaction.productID)
+                await transaction.finish()
+            }
+        }
+    }
+
+    private func checkVerified<T>(_ result: VerificationResult<T>) throws -> T {
+        switch result {
+        case .unverified:
+            throw PurchaseError.failedVerification
+        case .verified(let safe):
+            return safe
+        }
+    }
+
+    private static func sortIndex(for productID: String) -> Int {
+        switch productID {
+        case soloMonthlyProductID: return 0
+        case proMonthlyProductID: return 1
+        default: return Int.max
+        }
+    }
+}
+
+private extension UserPlan {
+    var priority: Int {
+        switch self {
+        case .free: return 0
+        case .solo: return 1
+        case .pro: return 2
+        case .team: return 3
+        }
+    }
+}

@@ -72,6 +72,7 @@
 		E9AFBDD4F399F47146987AA2 /* ProfilePromptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832740B2B275D4DB27786B16 /* ProfilePromptTests.swift */; };
 		ED4F4EBDB49DC0817F219CEC /* ICPEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAF12F608765DFCC96F8EE7 /* ICPEditView.swift */; };
 		F01AC7D5EDE1B70341AAEFF9 /* OutputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3803FC58049DADEB3786CB9 /* OutputService.swift */; };
+		A1B2C3D4E5F60718293A4B5C /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D3E4F5061728394A5B6C /* PurchaseService.swift */; };
 		FFA8B7C6D5E4F3E2D1 /* Error+Friendly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A2B3C4D5E6F7A8 /* Error+Friendly.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 /* Begin PBXFileReference section */
 		06115BDA71B14440934CB2C4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		07B38CA6B7359285F292FB20 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		B1C2D3E4F5061728394A5B6C /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
 		08D866E8BCD5AD1B47CAC8FB /* StreamingParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingParser.swift; sourceTree = "<group>"; };
 		0A4FA718589B69FA70370948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B3F4864C43A212E36067757 /* DealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailView.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				51423DD354A7ACEA71ECEC84 /* DealService.swift */,
 				E3803FC58049DADEB3786CB9 /* OutputService.swift */,
 				07B38CA6B7359285F292FB20 /* ProfileService.swift */,
+				B1C2D3E4F5061728394A5B6C /* PurchaseService.swift */,
 				C33B135C2C6ED2EDF455509A /* SpeechService.swift */,
 				08D866E8BCD5AD1B47CAC8FB /* StreamingParser.swift */,
 				87131A19896B7895E3F5C46A /* SupabaseService.swift */,
@@ -567,6 +570,7 @@
 				49540E49B75698D727339C36 /* PreviewData.swift in Sources */,
 				354CC8D03160D87D98D64110 /* Profile.swift in Sources */,
 				CE10DD4939F43D94AAC6CB90 /* ProfileService.swift in Sources */,
+				A1B2C3D4E5F60718293A4B5C /* PurchaseService.swift in Sources */,
 				6C3205E10EB51A3F35320913 /* Prompts.swift in Sources */,
 				35DBDA7961DC7EA7134276F3 /* RatingView.swift in Sources */,
 				96B6F2F860022356821851E6 /* SettingsView.swift in Sources */,
@@ -659,7 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = JFJ5GC836U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = PitchOS;
@@ -688,7 +692,7 @@
 				buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 19;
 				DEVELOPMENT_TEAM = JFJ5GC836U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = PitchOS;
@@ -717,7 +721,7 @@
 				buildSettings = {
 					ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 					CODE_SIGN_IDENTITY = "iPhone Developer";
-					CURRENT_PROJECT_VERSION = 8;
+					CURRENT_PROJECT_VERSION = 19;
 					DEVELOPMENT_TEAM = JFJ5GC836U;
 					GENERATE_INFOPLIST_FILE = YES;
 					INFOPLIST_KEY_CFBundleDisplayName = PitchOS;
