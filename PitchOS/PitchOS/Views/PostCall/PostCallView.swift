@@ -29,14 +29,18 @@ struct PostCallView: View {
 
             if let vm = viewModel {
                 ScrollView {
-                    switch selectedTab {
-                    case .notes:
-                        notesSection(vm)
-                    case .summary:
-                        summarySection(vm)
-                    case .email:
-                        emailSection(vm)
+                    VStack(spacing: 0) {
+                        switch selectedTab {
+                        case .notes:
+                            notesSection(vm)
+                        case .summary:
+                            summarySection(vm)
+                        case .email:
+                            emailSection(vm)
+                        }
                     }
+                    .frame(maxWidth: .infinity)
+                    .padding(.bottom, 120)
                 }
             } else {
                 ProgressView()
@@ -57,6 +61,9 @@ struct PostCallView: View {
                     deal: deal
                 )
             }
+        }
+        .onDisappear {
+            viewModel?.persistDraft()
         }
     }
 

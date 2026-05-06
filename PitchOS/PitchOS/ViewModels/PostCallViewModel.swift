@@ -25,6 +25,7 @@ final class PostCallViewModel {
     private let speechService: SpeechService
     private let usageService: UsageService
     private let profile: Profile
+    private let draftKey: String
     var deal: Deal?
 
     init(
@@ -41,6 +42,9 @@ final class PostCallViewModel {
         self.usageService = usageService
         self.profile = profile
         self.deal = deal
+        self.draftKey = Self.draftKey(profileId: profile.id, dealId: deal?.id)
+
+        restoreDraft()
     }
 
     var canGenerateSummary: Bool {
@@ -126,6 +130,7 @@ final class PostCallViewModel {
             )
             let saved = try await outputService.saveOutput(output)
             lastSummaryOutputId = saved.id
+            persistDraft()
         } catch {
             handleError(error)
         }
@@ -180,6 +185,7 @@ final class PostCallViewModel {
             )
             let saved = try await outputService.saveOutput(output)
             lastEmailOutputId = saved.id
+            persistDraft()
         } catch {
             handleError(error)
         }
@@ -190,5 +196,56 @@ final class PostCallViewModel {
     private func handleError(_ error: Error) {
         self.error = error.friendlyMessage
         HapticService.shared.error()
+    }
+
+    func persistDraft() {
+        let draft = PostCallDraft(
+            notesText: notesText,
+            summaryText: summaryText,
+            emailText: emailText,
+            lastSummaryOutputId: lastSummaryOutputId,
+            lastEmailOutputId: lastEmailOutputId
+        )
+
+        if draft.isEmpty {
+            UserDefaults.standard.removeObject(forKey: draftKey)
+            return
+        }
+
+        if let data = try? JSONEncoder().encode(draft) {
+            UserDefaults.standard.set(data, forKey: draftKey)
+        }
+    }
+
+    private func restoreDraft() {
+        guard
+            let data = UserDefaults.standard.data(forKey: draftKey),
+            let draft = try? JSONDecoder().decode(PostCallDraft.self, from: data)
+        else { return }
+
+        notesText = draft.notesText
+        summaryText = draft.summaryText
+        emailText = draft.emailText
+        lastSummaryOutputId = draft.lastSummaryOutputId
+        lastEmailOutputId = draft.lastEmailOutputId
+    }
+
+    private static func draftKey(profileId: UUID, dealId: UUID?) -> String {
+        let context = dealId?.uuidString ?? "standalone"
+        return "pitchos.postcall.draft.\(profileId.uuidString).\(context)"
+    }
+}
+
+private struct PostCallDraft: Codable {
+    var notesText: String
+    var summaryText: String
+    var emailText: String
+    var lastSummaryOutputId: UUID?
+    var lastEmailOutputId: UUID?
+
+    var isEmpty: Bool {
+        notesText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            && summaryText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            && emailText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 }
