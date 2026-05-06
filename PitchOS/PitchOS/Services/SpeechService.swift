@@ -2,6 +2,23 @@ import Foundation
 @preconcurrency import Speech
 @preconcurrency import AVFoundation
 
+enum SpeechServiceError: LocalizedError {
+    case speechUnavailable
+    case microphoneDenied
+    case recorderDidNotStart
+
+    var errorDescription: String? {
+        switch self {
+        case .speechUnavailable:
+            "Speech recognition is not available right now."
+        case .microphoneDenied:
+            "Microphone access is required for voice-to-text."
+        case .recorderDidNotStart:
+            "Voice input could not start."
+        }
+    }
+}
+
 @MainActor
 @Observable
 final class SpeechService {
@@ -50,32 +67,19 @@ final class SpeechService {
         let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-GB"))
         guard let speechRecognizer, speechRecognizer.isAvailable else {
             error = "Speech recognition is not available."
-            return
+            throw SpeechServiceError.speechUnavailable
         }
 
         do {
-            let audioSession = AVAudioSession.sharedInstance()
-            try audioSession.setCategory(.record, mode: .spokenAudio, options: [.duckOthers])
-            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-
             let url = FileManager.default.temporaryDirectory
                 .appendingPathComponent(UUID().uuidString)
                 .appendingPathExtension("m4a")
-            let settings: [String: Any] = [
-                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-                AVSampleRateKey: 44_100,
-                AVNumberOfChannelsKey: 1,
-                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-            ]
+            try configureAudioSession()
 
-            let recorder = try AVAudioRecorder(url: url, settings: settings)
+            let recorder = try AVAudioRecorder(url: url, settings: recordingSettings)
             recorder.prepareToRecord()
             guard recorder.record() else {
-                throw NSError(
-                    domain: "SpeechService",
-                    code: -1,
-                    userInfo: [NSLocalizedDescriptionKey: "Voice input could not start."]
-                )
+                throw SpeechServiceError.recorderDidNotStart
             }
 
             audioRecorder = recorder
@@ -87,6 +91,35 @@ final class SpeechService {
             cleanupRecordingSession(removeFile: true)
             self.error = "Voice input could not start. Please type your notes instead."
             throw error
+        }
+    }
+
+    private var recordingSettings: [String: Any] {
+        [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 44_100,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+    }
+
+    private func configureAudioSession() throws {
+        guard AVAudioApplication.shared.recordPermission == .granted else {
+            throw SpeechServiceError.microphoneDenied
+        }
+
+        let audioSession = AVAudioSession.sharedInstance()
+
+        do {
+            try audioSession.setCategory(
+                .playAndRecord,
+                mode: .spokenAudio,
+                options: [.duckOthers, .defaultToSpeaker, .allowBluetoothHFP]
+            )
+            try audioSession.setActive(true)
+        } catch {
+            try audioSession.setCategory(.record, mode: .default, options: [.duckOthers])
+            try audioSession.setActive(true)
         }
     }
 

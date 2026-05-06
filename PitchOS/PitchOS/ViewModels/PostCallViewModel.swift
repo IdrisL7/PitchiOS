@@ -68,6 +68,7 @@ final class PostCallViewModel {
                 return
             }
             do {
+                try await Task.sleep(for: .milliseconds(250))
                 try speechService.startRecording()
                 isRecordingVoice = true
             } catch {
