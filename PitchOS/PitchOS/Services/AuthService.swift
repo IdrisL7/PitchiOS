@@ -34,6 +34,28 @@ final class AuthService: Sendable {
         try await client.auth.signOut()
     }
 
+    func deleteAccount() async throws {
+        let session = try await client.auth.session
+
+        var request = URLRequest(url: URL(string: "\(AppConfig.supabaseURL)/functions/v1/delete-account")!)
+        request.httpMethod = "POST"
+        request.setValue(AppConfig.supabaseAnonKey, forHTTPHeaderField: "apikey")
+        request.setValue("Bearer \(session.accessToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw AuthServiceError.invalidResponse
+        }
+
+        guard (200..<300).contains(httpResponse.statusCode) else {
+            let detail = String(data: data, encoding: .utf8) ?? ""
+            throw AuthServiceError.deleteAccountFailed(detail: detail)
+        }
+
+        try? await client.auth.signOut()
+    }
+
     /// Access token for Edge Function calls
     func accessToken() async throws -> String {
         let session = try await client.auth.session
@@ -43,5 +65,19 @@ final class AuthService: Sendable {
     /// Force a session refresh when an edge call rejects the current JWT.
     func refreshSession() async throws -> Session {
         try await client.auth.refreshSession()
+    }
+}
+
+enum AuthServiceError: LocalizedError {
+    case invalidResponse
+    case deleteAccountFailed(detail: String)
+
+    var errorDescription: String? {
+        switch self {
+        case .invalidResponse:
+            return "We could not complete that request. Please try again."
+        case .deleteAccountFailed:
+            return "We could not delete your account. Please try again."
+        }
     }
 }

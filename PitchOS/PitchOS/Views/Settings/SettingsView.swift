@@ -6,6 +6,7 @@ struct SettingsView: View {
     @State private var viewModel: SettingsViewModel?
     @State private var usageCount: Int?
     @State private var purchaseService = PurchaseService()
+    @State private var showDeleteAccountConfirmation = false
 
     var body: some View {
         NavigationStack {
@@ -65,6 +66,8 @@ struct SettingsView: View {
                             }
                         }
 
+                        accountDeletionCard(vm)
+
                         // Version footer
                         Text("PitchOS \(AppConfig.appVersion) (\(AppConfig.buildNumber))")
                             .font(.caption2)
@@ -92,6 +95,20 @@ struct SettingsView: View {
                 }
             }
         }
+        .alert("Delete Account?", isPresented: $showDeleteAccountConfirmation) {
+            Button("Cancel", role: .cancel) {}
+            Button("Delete Account", role: .destructive) {
+                guard let vm = viewModel else { return }
+                Task {
+                    if await vm.deleteAccount() {
+                        appState.currentUser = nil
+                        appState.profile = nil
+                    }
+                }
+            }
+        } message: {
+            Text("This permanently deletes your PitchOS account, profile, deals, saved AI outputs, and usage history. This cannot be undone.")
+        }
     }
 
     #if DEBUG
@@ -113,6 +130,51 @@ struct SettingsView: View {
         } catch {
             purchaseService.error = "Your purchase completed, but we could not update your account. Please contact support."
         }
+    }
+
+    // MARK: - Account Deletion
+
+    private func accountDeletionCard(_ vm: SettingsViewModel) -> some View {
+        VStack(alignment: .leading, spacing: Spacing.sm) {
+            Label("Account", systemImage: "person.crop.circle.badge.xmark")
+                .font(.rounded(.footnote, weight: .semibold))
+                .foregroundStyle(.secondary)
+
+            Text("Permanently delete your account and all PitchOS data.")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+
+            Button(role: .destructive) {
+                showDeleteAccountConfirmation = true
+            } label: {
+                HStack {
+                    if vm.isDeletingAccount {
+                        ProgressView()
+                            .scaleEffect(0.8)
+                            .tint(Color.pitchDanger)
+                    } else {
+                        Image(systemName: "trash.fill")
+                    }
+                    Text(vm.isDeletingAccount ? "Deleting Account..." : "Delete Account")
+                }
+                .font(.rounded(.callout, weight: .semibold))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 14)
+                .background(Color.pitchDanger.opacity(0.12))
+                .foregroundStyle(Color.pitchDanger)
+                .clipShape(RoundedRectangle(cornerRadius: Radius.md, style: .continuous))
+            }
+            .buttonStyle(.plain)
+            .disabled(vm.isDeletingAccount)
+
+            if let error = vm.error {
+                Text(error)
+                    .font(.caption2)
+                    .foregroundStyle(Color.pitchDanger)
+            }
+        }
+        .padding(Spacing.md)
+        .glassCard()
     }
 
     // MARK: - Subscriptions

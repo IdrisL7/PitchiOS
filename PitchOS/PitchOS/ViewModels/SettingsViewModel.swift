@@ -7,6 +7,7 @@ final class SettingsViewModel {
     var isSaving = false
     var error: String?
     var saveSuccess = false
+    var isDeletingAccount = false
 
     private let profileService: ProfileService
     private let authService: AuthService
@@ -35,5 +36,21 @@ final class SettingsViewModel {
 
     func signOut() async throws {
         try await authService.signOut()
+    }
+
+    func deleteAccount() async -> Bool {
+        isDeletingAccount = true
+        error = nil
+        defer { isDeletingAccount = false }
+
+        do {
+            let profileId = profile.id
+            try await authService.deleteAccount()
+            PostCallViewModel.clearDrafts(profileId: profileId)
+            return true
+        } catch {
+            self.error = error.localizedDescription
+            return false
+        }
     }
 }

@@ -234,6 +234,13 @@ final class PostCallViewModel {
         let context = dealId?.uuidString ?? "standalone"
         return "pitchos.postcall.draft.\(profileId.uuidString).\(context)"
     }
+
+    static func clearDrafts(profileId: UUID) {
+        let prefix = "pitchos.postcall.draft.\(profileId.uuidString)."
+        for key in UserDefaults.standard.dictionaryRepresentation().keys where key.hasPrefix(prefix) {
+            UserDefaults.standard.removeObject(forKey: key)
+        }
+    }
 }
 
 private struct PostCallDraft: Codable {
