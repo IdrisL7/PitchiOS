@@ -18,8 +18,8 @@ final class PurchaseService {
         }
     }
 
-    static let soloMonthlyProductID = "com.pitchos.PitchOS.solo.monthly"
-    static let proMonthlyProductID = "com.pitchos.PitchOS.pro.monthly"
+    static let soloMonthlyProductID = "com.pitchos.solo.monthly"
+    static let proMonthlyProductID = "com.pitchos.pro.monthly"
 
     private static let productIDs = [
         soloMonthlyProductID,
