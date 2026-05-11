@@ -198,19 +198,18 @@ struct SettingsView: View {
                 ProgressView().tint(Color.pitchAccent)
                     .frame(maxWidth: .infinity, alignment: .center)
             } else if purchaseService.products.isEmpty {
-                #if DEBUG
-                if isScreenshotMode {
-                    subscriptionScreenshotRows
-                } else {
-                    Text("Subscriptions are being prepared in App Store Connect.")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-                #else
-                Text("Subscriptions are being prepared in App Store Connect.")
+                Text(purchaseService.error ?? "Subscriptions are loading from the App Store.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                #endif
+
+                Button {
+                    Task { await purchaseService.loadProducts(forceReload: true) }
+                } label: {
+                    Label("Reload Subscriptions", systemImage: "arrow.clockwise")
+                        .font(.rounded(.caption, weight: .semibold))
+                        .foregroundStyle(Color.pitchAccent)
+                }
+                .buttonStyle(.plain)
             } else {
                 VStack(spacing: Spacing.xs) {
                     ForEach(purchaseService.products, id: \.id) { product in

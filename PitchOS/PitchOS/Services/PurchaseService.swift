@@ -20,10 +20,14 @@ final class PurchaseService {
 
     static let soloMonthlyProductID = "com.pitchos.solo.monthly"
     static let proMonthlyProductID = "com.pitchos.pro.monthly"
+    static let legacySoloMonthlyProductID = "com.pitchos.PitchOS.solo.monthly"
+    static let legacyProMonthlyProductID = "com.pitchos.PitchOS.pro.monthly"
 
     private static let productIDs = [
         soloMonthlyProductID,
-        proMonthlyProductID
+        proMonthlyProductID,
+        legacySoloMonthlyProductID,
+        legacyProMonthlyProductID
     ]
 
     var products: [StoreKit.Product] = []
@@ -38,8 +42,8 @@ final class PurchaseService {
         updatesTask = listenForTransactions()
     }
 
-    func loadProducts() async {
-        guard products.isEmpty else { return }
+    func loadProducts(forceReload: Bool = false) async {
+        guard forceReload || products.isEmpty else { return }
 
         isLoading = true
         error = nil
@@ -47,6 +51,9 @@ final class PurchaseService {
             let loadedProducts = try await StoreKit.Product.products(for: Self.productIDs)
             products = loadedProducts.sorted { lhs, rhs in
                 Self.sortIndex(for: lhs.id) < Self.sortIndex(for: rhs.id)
+            }
+            if products.isEmpty {
+                self.error = "Solo Monthly and Pro Monthly are not available in StoreKit yet."
             }
             await refreshPurchasedPlan()
         } catch {
@@ -99,8 +106,10 @@ final class PurchaseService {
 
     static func plan(for productID: String) -> UserPlan? {
         switch productID {
-        case soloMonthlyProductID: return .solo
-        case proMonthlyProductID: return .pro
+        case soloMonthlyProductID, legacySoloMonthlyProductID:
+            return .solo
+        case proMonthlyProductID, legacyProMonthlyProductID:
+            return .pro
         default: return nil
         }
     }
@@ -126,8 +135,10 @@ final class PurchaseService {
 
     private static func sortIndex(for productID: String) -> Int {
         switch productID {
-        case soloMonthlyProductID: return 0
-        case proMonthlyProductID: return 1
+        case soloMonthlyProductID, legacySoloMonthlyProductID:
+            return 0
+        case proMonthlyProductID, legacyProMonthlyProductID:
+            return 1
         default: return Int.max
         }
     }
