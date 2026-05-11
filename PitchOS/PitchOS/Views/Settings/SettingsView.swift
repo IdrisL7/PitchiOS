@@ -31,6 +31,7 @@ struct SettingsView: View {
                         }
 
                         appearanceCard
+                        legalCard
 
                         #if DEBUG
                         if !isScreenshotMode {
@@ -360,6 +361,42 @@ struct SettingsView: View {
         }
         .padding(Spacing.md)
         .glassCard()
+    }
+
+    // MARK: - Legal Card
+
+    private var legalCard: some View {
+        VStack(alignment: .leading, spacing: Spacing.sm) {
+            Label("Legal", systemImage: "doc.text.fill")
+                .font(.rounded(.footnote, weight: .semibold))
+                .foregroundStyle(.secondary)
+
+            Link(destination: URL(string: AppConfig.termsOfUseURL)!) {
+                legalRow("Terms of Use", systemImage: "doc.plaintext")
+            }
+
+            Link(destination: URL(string: AppConfig.privacyPolicyURL)!) {
+                legalRow("Privacy Policy", systemImage: "lock.shield")
+            }
+        }
+        .padding(Spacing.md)
+        .glassCard()
+    }
+
+    private func legalRow(_ title: String, systemImage: String) -> some View {
+        HStack {
+            Label(title, systemImage: systemImage)
+                .font(.rounded(.callout, weight: .semibold))
+            Spacer()
+            Image(systemName: "arrow.up.right")
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(.secondary)
+        }
+        .padding(.vertical, 10)
+        .padding(.horizontal, 12)
+        .background(Color.primary.opacity(0.05))
+        .foregroundStyle(Color.pitchAccent)
+        .clipShape(RoundedRectangle(cornerRadius: Radius.md, style: .continuous))
     }
 
     // MARK: - Usage Card

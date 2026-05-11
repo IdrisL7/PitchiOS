@@ -26,6 +26,10 @@ enum AppConfig {
     static let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
     static let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"
 
+    // MARK: - Legal
+    static let privacyPolicyURL = "https://ipdyauprajeoyhhatiqm.supabase.co/functions/v1/legal/privacy"
+    static let termsOfUseURL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+
     // MARK: - AI Models
     static let objectionModel = "claude-haiku-4-5-20251001"
     static let summaryModel   = "claude-sonnet-4-6"
