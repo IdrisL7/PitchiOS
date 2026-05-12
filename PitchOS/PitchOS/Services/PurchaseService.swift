@@ -5,13 +5,10 @@ import StoreKit
 @Observable
 final class PurchaseService {
     enum PurchaseError: LocalizedError {
-        case unknownProduct
         case failedVerification
 
         var errorDescription: String? {
             switch self {
-            case .unknownProduct:
-                return "This subscription is not available yet."
             case .failedVerification:
                 return "We could not verify this purchase. Please try again."
             }
@@ -35,6 +32,7 @@ final class PurchaseService {
     var isLoading = false
     var isPurchasing = false
     var error: String?
+    var loadMessage: String?
 
     private var updatesTask: Task<Void, Never>?
 
@@ -47,17 +45,18 @@ final class PurchaseService {
 
         isLoading = true
         error = nil
+        loadMessage = nil
         do {
             let loadedProducts = try await StoreKit.Product.products(for: Self.productIDs)
             products = loadedProducts.sorted { lhs, rhs in
                 Self.sortIndex(for: lhs.id) < Self.sortIndex(for: rhs.id)
             }
             if products.isEmpty {
-                self.error = "Solo Monthly and Pro Monthly are not available in StoreKit yet."
+                self.loadMessage = "Subscription options are loading from the App Store."
             }
             await refreshPurchasedPlan()
         } catch {
-            self.error = "Subscriptions are not available right now."
+            self.loadMessage = "Subscription options are loading from the App Store."
         }
         isLoading = false
     }

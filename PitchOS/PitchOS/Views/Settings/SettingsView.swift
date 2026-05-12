@@ -198,7 +198,7 @@ struct SettingsView: View {
                 ProgressView().tint(Color.pitchAccent)
                     .frame(maxWidth: .infinity, alignment: .center)
             } else if purchaseService.products.isEmpty {
-                Text(purchaseService.error ?? "Subscriptions are loading from the App Store.")
+                Text(purchaseService.loadMessage ?? "Subscription options are loading from the App Store.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
 
@@ -221,7 +221,7 @@ struct SettingsView: View {
                                         await applyPurchasedPlan(purchasedPlan, to: vm)
                                     }
                                 } catch {
-                                    purchaseService.error = error.localizedDescription
+                                    purchaseService.error = "We could not complete the purchase. Please try again."
                                 }
                             }
                         } label: {
@@ -257,7 +257,7 @@ struct SettingsView: View {
                             await applyPurchasedPlan(restoredPlan, to: vm)
                         }
                     } catch {
-                        purchaseService.error = error.localizedDescription
+                        purchaseService.error = "We could not restore purchases. Please try again."
                     }
                 }
             } label: {
