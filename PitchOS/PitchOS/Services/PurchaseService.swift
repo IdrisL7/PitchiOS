@@ -22,6 +22,11 @@ final class PurchaseService {
 
     private static let productIDs = [
         soloMonthlyProductID,
+        proMonthlyProductID
+    ]
+
+    private static let knownProductIDs = [
+        soloMonthlyProductID,
         proMonthlyProductID,
         legacySoloMonthlyProductID,
         legacyProMonthlyProductID
@@ -156,7 +161,8 @@ final class PurchaseService {
             return 0
         case proMonthlyProductID, legacyProMonthlyProductID:
             return 1
-        default: return Int.max
+        default:
+            return knownProductIDs.firstIndex(of: productID) ?? Int.max
         }
     }
 }
