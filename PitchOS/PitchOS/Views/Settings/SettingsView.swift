@@ -197,7 +197,7 @@ struct SettingsView: View {
             if purchaseService.isLoading {
                 ProgressView().tint(Color.pitchAccent)
                     .frame(maxWidth: .infinity, alignment: .center)
-            } else if purchaseService.products.isEmpty {
+            } else if purchaseService.offers.isEmpty {
                 Text(purchaseService.loadMessage ?? "Subscription options are loading from the App Store.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -212,12 +212,11 @@ struct SettingsView: View {
                 .buttonStyle(.plain)
             } else {
                 VStack(spacing: Spacing.xs) {
-                    ForEach(purchaseService.products, id: \.id) { product in
-                        let plan = PurchaseService.plan(for: product.id) ?? .solo
+                    ForEach(purchaseService.offers) { offer in
                         Button {
                             Task {
                                 do {
-                                    if let purchasedPlan = try await purchaseService.purchase(product) {
+                                    if let purchasedPlan = try await purchaseService.purchase(offer) {
                                         await applyPurchasedPlan(purchasedPlan, to: vm)
                                     }
                                 } catch {
@@ -226,17 +225,17 @@ struct SettingsView: View {
                             }
                         } label: {
                             HStack(spacing: Spacing.sm) {
-                                Image(systemName: plan.icon)
+                                Image(systemName: offer.plan.icon)
                                     .frame(width: 24)
                                 VStack(alignment: .leading, spacing: 2) {
-                                    Text(product.displayName.isEmpty ? plan.displayName : product.displayName)
+                                    Text(offer.displayName)
                                         .font(.rounded(.subheadline, weight: .semibold))
                                     Text("Unlimited AI generations")
                                         .font(.caption)
                                         .foregroundStyle(.secondary)
                                 }
                                 Spacer()
-                                Text(product.displayPrice)
+                                Text(offer.displayPrice)
                                     .font(.rounded(.subheadline, weight: .bold))
                             }
                             .padding(.vertical, 10)
