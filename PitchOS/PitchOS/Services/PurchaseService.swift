@@ -33,6 +33,7 @@ final class PurchaseService {
     var isPurchasing = false
     var error: String?
     var loadMessage: String?
+    var loadAttemptCount = 0
 
     private var updatesTask: Task<Void, Never>?
 
@@ -46,19 +47,36 @@ final class PurchaseService {
         isLoading = true
         error = nil
         loadMessage = nil
-        do {
-            let loadedProducts = try await StoreKit.Product.products(for: Self.productIDs)
-            products = loadedProducts.sorted { lhs, rhs in
-                Self.sortIndex(for: lhs.id) < Self.sortIndex(for: rhs.id)
+        loadAttemptCount = 0
+        defer { isLoading = false }
+
+        let maxAttempts = forceReload ? 8 : 5
+        for attempt in 1...maxAttempts {
+            loadAttemptCount = attempt
+
+            do {
+                let loadedProducts = try await StoreKit.Product.products(for: Self.productIDs)
+                products = loadedProducts.sorted { lhs, rhs in
+                    Self.sortIndex(for: lhs.id) < Self.sortIndex(for: rhs.id)
+                }
+
+                if !products.isEmpty {
+                    loadMessage = nil
+                    await refreshPurchasedPlan()
+                    return
+                }
+            } catch {
+                products = []
             }
-            if products.isEmpty {
-                self.loadMessage = "Subscription options are loading from the App Store."
+
+            if attempt < maxAttempts {
+                loadMessage = "Checking subscription options with the App Store."
+                try? await Task.sleep(for: .seconds(2))
             }
-            await refreshPurchasedPlan()
-        } catch {
-            self.loadMessage = "Subscription options are loading from the App Store."
         }
-        isLoading = false
+
+        loadMessage = "Subscription options are still syncing with the App Store. Please try Reload Subscriptions shortly."
+        await refreshPurchasedPlan()
     }
 
     func purchase(_ product: StoreKit.Product) async throws -> UserPlan? {
