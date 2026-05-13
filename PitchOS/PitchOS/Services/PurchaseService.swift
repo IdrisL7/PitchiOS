@@ -51,7 +51,6 @@ final class PurchaseService {
     var loadAttemptCount = 0
 
     private var updatesTask: Task<Void, Never>?
-    private let legacyPaymentCoordinator = LegacyPaymentCoordinator()
 
     init() {
         updatesTask = listenForTransactions()
@@ -147,7 +146,8 @@ final class PurchaseService {
 
         guard SKPaymentQueue.canMakePayments() else { return nil }
 
-        guard let productID = try await legacyPaymentCoordinator.purchase(product) else { return nil }
+        let coordinator = LegacyPaymentCoordinator()
+        guard let productID = try await coordinator.purchase(product) else { return nil }
         guard let plan = Self.plan(for: productID) else { return nil }
         purchasedPlan = plan
         return plan
@@ -258,8 +258,7 @@ private extension UserPlan {
     }
 }
 
-@MainActor
-private final class LegacyProductsLoader: NSObject, @preconcurrency SKProductsRequestDelegate {
+private final class LegacyProductsLoader: NSObject, SKProductsRequestDelegate {
     private var continuation: CheckedContinuation<[SKProduct], Never>?
     private var request: SKProductsRequest?
 
@@ -301,24 +300,20 @@ private enum LegacyPurchaseError: LocalizedError {
     }
 }
 
-@MainActor
-private final class LegacyPaymentCoordinator: NSObject, @preconcurrency SKPaymentTransactionObserver {
+private final class LegacyPaymentCoordinator: NSObject, SKPaymentTransactionObserver {
     private var continuation: CheckedContinuation<String?, Error>?
     private var productID: String?
-
-    override init() {
-        super.init()
-        SKPaymentQueue.default().add(self)
-    }
+    private var isObserving = false
 
     deinit {
-        SKPaymentQueue.default().remove(self)
+        stopObserving()
     }
 
     func purchase(_ product: SKProduct) async throws -> String? {
         try await withCheckedThrowingContinuation { continuation in
             self.continuation = continuation
             productID = product.productIdentifier
+            startObserving()
             SKPaymentQueue.default().add(SKPayment(product: product))
         }
     }
@@ -350,11 +345,25 @@ private final class LegacyPaymentCoordinator: NSObject, @preconcurrency SKPaymen
         continuation?.resume(returning: productID)
         continuation = nil
         self.productID = nil
+        stopObserving()
     }
 
     private func finish(throwing error: Error) {
         continuation?.resume(throwing: error)
         continuation = nil
         productID = nil
+        stopObserving()
+    }
+
+    private func startObserving() {
+        guard !isObserving else { return }
+        SKPaymentQueue.default().add(self)
+        isObserving = true
+    }
+
+    private func stopObserving() {
+        guard isObserving else { return }
+        SKPaymentQueue.default().remove(self)
+        isObserving = false
     }
 }
