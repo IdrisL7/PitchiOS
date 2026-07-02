@@ -49,6 +49,7 @@
 		9D64D5C33C23B34D0B1DD0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4FA718589B69FA70370948 /* Assets.xcassets */; };
 		A113F227BF23890DF8840B81 /* OnboardingMethodologyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA706B2BD4D7A04DEE47C714 /* OnboardingMethodologyView.swift */; };
 		A3572D8194E199B8CC48BA3A /* OnboardingNameRoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5D503F45A0A2CFD6C0BCF8 /* OnboardingNameRoleView.swift */; };
+		AA11223344556677 /* SalesMethodology.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11223344556677 /* SalesMethodology.swift */; };
 		AD0163BDC68BDD7CFEEF56A9 /* OnboardingBuyersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07849E2AB7299AD7A5D13A1 /* OnboardingBuyersView.swift */; };
 		B4EE5B92C32A4137AFCEF302 /* ActionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3F8F93BB5472989C8F4FD /* ActionCard.swift */; };
 		B68ACB4C6A0ECB6D0AC5F459 /* NewDealSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A357264C035A74CA071630B /* NewDealSheet.swift */; };
@@ -59,6 +60,7 @@
 		C6B56240CCEAA728F8EC99FA /* PostCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3B18A12F0EB5D25A8CB162 /* PostCallViewModel.swift */; };
 		C7C9E213B527E687C0186FFE /* UsageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE76C306D400EF4708348E0 /* UsageService.swift */; };
 		CC06B8C962B45B109820533E /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21981D952CB519DC2BCCE3B3 /* OnboardingContainerView.swift */; };
+		CC11223344556677 /* MethodologyPickerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11223344556677 /* MethodologyPickerSection.swift */; };
 		CDFA51C5D70043768EEB67AA /* DealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C0A66CD55D41659144B5E5 /* DealDetailViewModel.swift */; };
 		CE10DD4939F43D94AAC6CB90 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B38CA6B7359285F292FB20 /* ProfileService.swift */; };
 		D22A4516418945F09DE2A0CB /* HapticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA322768B534CE89227715B /* HapticService.swift */; };
@@ -71,8 +73,6 @@
 		ED4F4EBDB49DC0817F219CEC /* ICPEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAF12F608765DFCC96F8EE7 /* ICPEditView.swift */; };
 		F01AC7D5EDE1B70341AAEFF9 /* OutputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3803FC58049DADEB3786CB9 /* OutputService.swift */; };
 		FFA8B7C6D5E4F3E2D1 /* Error+Friendly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A2B3C4D5E6F7A8 /* Error+Friendly.swift */; };
-		AA11223344556677 /* SalesMethodology.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11223344556677 /* SalesMethodology.swift */; };
-		CC11223344556677 /* MethodologyPickerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD11223344556677 /* MethodologyPickerSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,8 +97,6 @@
 		11957699E2F09E13599CE598 /* Prompts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompts.swift; sourceTree = "<group>"; };
 		11C0A66CD55D41659144B5E5 /* DealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealDetailViewModel.swift; sourceTree = "<group>"; };
 		1E1E194CA5CA4EBD87380D93 /* VerticalTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalTemplates.swift; sourceTree = "<group>"; };
-		BB11223344556677 /* SalesMethodology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesMethodology.swift; sourceTree = "<group>"; };
-		DD11223344556677 /* MethodologyPickerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodologyPickerSection.swift; sourceTree = "<group>"; };
 		1F81094A9E49117A43BB3BA1 /* StreamingParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingParserTests.swift; sourceTree = "<group>"; };
 		21981D952CB519DC2BCCE3B3 /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
 		2A09F5AA7437B0FBDFB5CD11 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -133,6 +131,7 @@
 		9DA2DA4B0C52A5A926829646 /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
 		AA6CF0D94D8A1CAC1D68A09A /* OnboardingProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProductView.swift; sourceTree = "<group>"; };
 		BA94B7B985906210F9D387AE /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
+		BB11223344556677 /* SalesMethodology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesMethodology.swift; sourceTree = "<group>"; };
 		BC8CFBA2009162A8BCF110EA /* StreamingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingTextView.swift; sourceTree = "<group>"; };
 		C1256A7530F4486A86E8FFD3 /* GenerateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateButton.swift; sourceTree = "<group>"; };
 		C33B135C2C6ED2EDF455509A /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
@@ -143,6 +142,7 @@
 		D44BB00D00BF572C156A8E21 /* PitchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchOSApp.swift; sourceTree = "<group>"; };
 		DA706B2BD4D7A04DEE47C714 /* OnboardingMethodologyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMethodologyView.swift; sourceTree = "<group>"; };
 		DBAF12F608765DFCC96F8EE7 /* ICPEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICPEditView.swift; sourceTree = "<group>"; };
+		DD11223344556677 /* MethodologyPickerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodologyPickerSection.swift; sourceTree = "<group>"; };
 		DDAF06D69536C2E946B5F0E4 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		DFCBC7D24F2B51D5B65A122C /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E2104B8450CC9B8EA9D94676 /* DealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListViewModel.swift; sourceTree = "<group>"; };
@@ -659,18 +659,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = JFJ5GC836U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = PitchOS;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PitchOS uses the microphone for voice-to-text note capture during calls.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "PitchOS uses speech recognition to transcribe your call notes.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitchos.PitchOS;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -685,18 +688,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = JFJ5GC836U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = PitchOS;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "PitchOS uses the microphone for voice-to-text note capture during calls.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "PitchOS uses speech recognition to transcribe your call notes.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitchos.PitchOS;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

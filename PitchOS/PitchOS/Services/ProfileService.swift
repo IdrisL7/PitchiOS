@@ -19,13 +19,18 @@ final class ProfileService: Sendable {
     }
 
     func createProfile(_ profile: Profile) async throws -> Profile {
+        // Upsert without returning — avoids RLS issues with returning=representation
         try await client
             .from("profiles")
-            .insert(profile)
-            .select()
-            .single()
+            .upsert(profile, onConflict: "id")
             .execute()
-            .value
+
+        // Fetch separately using the proven SELECT path
+        guard let saved = try await fetchProfile(userId: profile.id) else {
+            throw NSError(domain: "ProfileService", code: -1,
+                          userInfo: [NSLocalizedDescriptionKey: "Profile saved but could not be loaded. Please try signing in again."])
+        }
+        return saved
     }
 
     func updateProfile(_ profile: Profile) async throws -> Profile {
