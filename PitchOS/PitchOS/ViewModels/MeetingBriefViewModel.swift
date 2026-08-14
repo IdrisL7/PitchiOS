@@ -11,6 +11,7 @@ final class MeetingBriefViewModel {
     private let aiService: AIService
     private let outputService: OutputService
     private let usageService: UsageService
+    private let ratingPromptService: RatingPromptService
     private let profile: Profile
     var deal: Deal?
 
@@ -18,12 +19,14 @@ final class MeetingBriefViewModel {
         aiService: AIService,
         outputService: OutputService,
         usageService: UsageService,
+        ratingPromptService: RatingPromptService = .shared,
         profile: Profile,
         deal: Deal? = nil
     ) {
         self.aiService = aiService
         self.outputService = outputService
         self.usageService = usageService
+        self.ratingPromptService = ratingPromptService
         self.profile = profile
         self.deal = deal
     }
@@ -70,6 +73,7 @@ final class MeetingBriefViewModel {
             )
             let saved = try await outputService.saveOutput(output)
             lastOutputId = saved.id
+            ratingPromptService.recordSuccessfulBrief()
         } catch {
             handleError(error)
         }

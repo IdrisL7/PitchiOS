@@ -11,7 +11,7 @@ struct MethodologyPickerSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: Spacing.sm) {
-            Text("Sales Methodology")
+            Text("Sales approach")
                 .font(.rounded(.footnote, weight: .semibold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
@@ -50,7 +50,7 @@ struct MethodologyTile: View {
         Button(action: onTap) {
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
-                    Text(method.rawValue)
+                    Text(method.displayName)
                         .font(.rounded(.subheadline, weight: .semibold))
                         .foregroundStyle(isSelected ? .white : .primary)
                     Spacer()
@@ -108,7 +108,7 @@ struct MethodologyDetailSheet: View {
 
                     // Header badge
                     HStack {
-                        Text(method.rawValue)
+                        Text(method.displayName)
                             .font(.rounded(.title2, weight: .bold))
                             .foregroundStyle(method.accentColor)
                         Spacer()
@@ -151,7 +151,7 @@ struct MethodologyDetailSheet: View {
                     Button {
                         onSelect()
                     } label: {
-                        Label("Use \(method.rawValue)", systemImage: "checkmark")
+                        Label("Use \(method.displayName)", systemImage: "checkmark")
                             .font(.headline)
                             .frame(maxWidth: .infinity)
                             .padding(Spacing.sm)

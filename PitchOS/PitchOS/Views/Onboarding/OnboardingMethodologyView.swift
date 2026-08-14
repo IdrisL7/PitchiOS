@@ -9,19 +9,19 @@ struct OnboardingMethodologyView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("How do you sell?")
                         .font(.title2.bold())
-                    Text("Your sales methodology shapes how questions and responses are structured. Add up to 5 differentiators for your product.")
+                    Text("Choose a sales approach to shape your questions and responses. Not sure? Choose General / Not sure — you can refine it later. Add up to 5 differentiators for your product.")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }
 
                 // Methodology picker
                 VStack(alignment: .leading, spacing: 12) {
-                    Text("Sales methodology")
+                    Text("Sales approach")
                         .font(.subheadline.weight(.medium))
 
                     Picker("Methodology", selection: $viewModel.methodology) {
                         ForEach(OnboardingViewModel.methodologies, id: \.self) { method in
-                            Text(method).tag(method)
+                            Text(SalesMethodology(rawValue: method)?.displayName ?? method).tag(method)
                         }
                     }
                     .pickerStyle(.segmented)

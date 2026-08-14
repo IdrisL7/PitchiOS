@@ -48,6 +48,16 @@ struct MeetingBriefView: View {
                     if vm.hasContent || vm.isStreaming {
                         aiOutputCard(vm)
 
+                        if vm.hasContent {
+                            Label(
+                                "Includes top objections and concise counters",
+                                systemImage: "arrowshape.turn.up.right"
+                            )
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+
                         if !vm.isStreaming && vm.hasContent {
                             HStack {
                                 CopyButton("Copy Brief", text: vm.briefText)
@@ -60,6 +70,8 @@ struct MeetingBriefView: View {
                                 .foregroundStyle(Color.pitchAccent)
                         }
                     }
+                } else if appState.profile == nil {
+                    profileRequiredState
                 }
             }
             .padding(Spacing.md)
@@ -119,6 +131,34 @@ struct MeetingBriefView: View {
         }
         .padding(Spacing.md)
         .glassCard(isAIContent: true, isStreaming: vm.isStreaming)
+    }
+
+    private var profileRequiredState: some View {
+        VStack(alignment: .leading, spacing: Spacing.md) {
+            Image(systemName: "person.crop.circle.badge.exclamationmark")
+                .font(.system(size: 30))
+                .foregroundStyle(Color.pitchAccent)
+
+            Text("Finish your profile first")
+                .font(.rounded(.title3, weight: .bold))
+
+            Text("Meeting Brief uses your product, buyers, and sales approach to prepare a useful pre-call plan.")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+
+            if appState.currentUser != nil {
+                NavigationLink {
+                    OnboardingContainerView()
+                } label: {
+                    Label("Open profile setup", systemImage: "arrow.right")
+                        .font(.rounded(.callout, weight: .semibold))
+                        .foregroundStyle(Color.pitchAccent)
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(Spacing.md)
+        .glassCard()
     }
 
     private func initViewModel() {

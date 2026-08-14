@@ -20,7 +20,7 @@ enum AppConfig {
     #endif
 
     // MARK: - Usage Limits
-    static let freeGenerationsPerMonth = 50
+    static let freeGenerationsPerMonth = 10
 
     // MARK: - App Info
     static let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"

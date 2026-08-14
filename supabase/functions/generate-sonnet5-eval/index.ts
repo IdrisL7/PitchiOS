@@ -7,7 +7,7 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 const CLAUDE_API_URL = "https://api.anthropic.com/v1/messages";
 
-// Model routing by output type
+// Isolated evaluation candidate. The live generate function remains unchanged.
 const MODEL_MAP: Record<string, string> = {
   objection: "claude-haiku-4-5-20251001",
   summary: "claude-sonnet-5",
@@ -16,7 +16,6 @@ const MODEL_MAP: Record<string, string> = {
   brief: "claude-sonnet-5",
 };
 
-// Max tokens per type — keeps costs predictable
 const MAX_TOKENS_MAP: Record<string, number> = {
   objection: 512,
   summary: 1024,
@@ -61,7 +60,6 @@ MANDATORY EMAIL CONTRACT:
 };
 
 Deno.serve(async (req) => {
-  // CORS preflight
   if (req.method === "OPTIONS") {
     return new Response(null, { status: 204, headers: CORS_HEADERS });
   }
@@ -70,25 +68,23 @@ Deno.serve(async (req) => {
     return json({ error: "Method not allowed" }, 405);
   }
 
-  // ── Auth: verify the Supabase JWT ────────────────────────────────────────
   const authHeader = req.headers.get("Authorization");
   if (!authHeader?.startsWith("Bearer ")) {
     return json({ error: "Missing or malformed Authorization header" }, 401);
   }
 
   const token = authHeader.slice(7);
-
   const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
     auth: { persistSession: false },
   });
 
-  const { data: { user }, error: authError } = await supabase.auth.getUser(
-    token,
-  );
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser(token);
   if (authError || !user) {
     return json({ error: "Unauthorized — invalid or expired token" }, 401);
   }
-  // ─────────────────────────────────────────────────────────────────────────
 
   if (!CLAUDE_API_KEY) {
     return json({ error: "CLAUDE_API_KEY not configured on server" }, 500);
@@ -111,15 +107,6 @@ Deno.serve(async (req) => {
   const usesSonnet5 = model === "claude-sonnet-5";
   const systemPrompt = `${profileContext ?? ""}${FORMAT_GUARD[type] ?? ""}`;
 
-  const claudeRequest = {
-    model,
-    max_tokens: maxTokens,
-    stream: true,
-    ...(usesSonnet5 ? { thinking: { type: "disabled" } } : {}),
-    system: systemPrompt,
-    messages: [{ role: "user", content: userPrompt }],
-  };
-
   const claudeResponse = await fetch(CLAUDE_API_URL, {
     method: "POST",
     headers: {
@@ -127,7 +114,14 @@ Deno.serve(async (req) => {
       "x-api-key": CLAUDE_API_KEY,
       "anthropic-version": "2023-06-01",
     },
-    body: JSON.stringify(claudeRequest),
+    body: JSON.stringify({
+      model,
+      max_tokens: maxTokens,
+      stream: true,
+      ...(usesSonnet5 ? { thinking: { type: "disabled" } } : {}),
+      system: systemPrompt,
+      messages: [{ role: "user", content: userPrompt }],
+    }),
   });
 
   if (!claudeResponse.ok) {
@@ -139,19 +133,16 @@ Deno.serve(async (req) => {
     return json({ error: `Claude API error ${status}`, detail }, status);
   }
 
-  // Pipe SSE stream directly back to iOS client
   return new Response(claudeResponse.body, {
     status: 200,
     headers: {
       ...CORS_HEADERS,
       "Content-Type": "text/event-stream",
       "Cache-Control": "no-cache",
-      "Connection": "keep-alive",
+      Connection: "keep-alive",
     },
   });
 });
-
-// ── Helpers ──────────────────────────────────────────────────────────────────
 
 function json(data: unknown, status = 200): Response {
   return new Response(JSON.stringify(data), {

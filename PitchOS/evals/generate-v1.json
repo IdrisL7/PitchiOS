@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "fixture_type": "frozen_edge_function_requests",
+  "cases": [
+    {
+      "id": "brief-professional-services-discovery",
+      "body": {
+        "type": "brief",
+        "profileContext": "You are PitchOS, an AI assistant for enterprise B2B solutions engineers and account executives. The user is an AI solutions consultant selling document workflow automation to UK professional services firms. Target buyers are operations directors and managing partners. Use MEDDIC. Be precise, buyer-centric, factual, and concise. Write plain text only. Use plain section labels and dash bullets. Do not use Markdown tables or invented facts.",
+        "userPrompt": "Generate a concise pre-call meeting brief. Deal context: Company: Northbank Conveyancing. Contact: Priya Shah, Operations Director. Stage: discovery. Notes: 22 staff process emailed property documents manually; turnaround varies by fee earner; interested in document checking but has not shared volumes or error rates. Structure the brief using Prospect Snapshot, Likely Priorities, Key Risks, Recommended Focus, and Suggested First Question. Keep it under 200 words."
+      },
+      "expect": {
+        "required_strings": ["Prospect Snapshot:", "Likely Priorities:", "Key Risks:", "Recommended Focus:", "Suggested First Question:"],
+        "forbidden_strings": ["##", "**", "|"],
+        "max_words": 200
+      }
+    },
+    {
+      "id": "brief-cybersecurity-negotiation",
+      "body": {
+        "type": "brief",
+        "profileContext": "You are PitchOS, an AI assistant for enterprise B2B solutions engineers and account executives. The user sells a cybersecurity posture platform to mid-market software companies. Target buyers are CISOs, security directors, and procurement leads. Use Challenger. Be precise, buyer-centric, factual, and concise. Write plain text only. Use plain section labels and dash bullets. Do not use Markdown tables or invented facts.",
+        "userPrompt": "Generate a concise pre-call meeting brief. Deal context: Company: Alder Cloud. Contact: Marcus Green, CISO. Stage: negotiation. Notes: Technical validation passed. Procurement wants a 20 percent reduction and a 30-day termination clause. Security team wants deployment before the October audit. No approved concession has been offered. Structure the brief using Prospect Snapshot, Likely Priorities, Key Risks, Recommended Focus, and Suggested First Question. Keep it under 200 words."
+      },
+      "expect": {
+        "required_strings": ["Prospect Snapshot:", "Likely Priorities:", "Key Risks:", "Recommended Focus:", "Suggested First Question:"],
+        "forbidden_strings": ["##", "**", "|"],
+        "max_words": 200
+      }
+    },
+    {
+      "id": "questions-professional-services-meddic",
+      "body": {
+        "type": "questions",
+        "profileContext": "You are PitchOS, an AI assistant for enterprise B2B solutions engineers and account executives. The user sells document workflow automation to UK professional services firms. Use MEDDIC. Write plain text only, with numbered questions and no Markdown.",
+        "userPrompt": "Generate a discovery question bank. Deal context: Northbank Conveyancing, Operations Director, discovery stage, 22 staff, manual emailed document checking, volumes and error rates unknown. Sales vertical: professional services. Sales methodology: MEDDIC. Question 1 must be exactly: If you don't solve this problem, what does that look like 12 months from now? Generate 14 additional open-ended questions numbered 2 to 15. Do not use binary or leading questions."
+      },
+      "expect": {
+        "required_strings": ["1. If you don't solve this problem, what does that look like 12 months from now?", "15."],
+        "forbidden_strings": ["##", "**", "|"],
+        "max_words": 420
+      }
+    },
+    {
+      "id": "questions-cybersecurity-spin",
+      "body": {
+        "type": "questions",
+        "profileContext": "You are PitchOS, an AI assistant for enterprise B2B solutions engineers and account executives. The user sells a cybersecurity posture platform to mid-market software companies. Use SPIN. Write plain text only, with numbered questions and no Markdown.",
+        "userPrompt": "Generate a discovery question bank. Deal context: Beacon Metrics, VP Engineering, evaluation stage, preparing for SOC 2 renewal, currently tracks remediation in spreadsheets, security headcount is fixed this year. Sales vertical: SaaS cybersecurity. Sales methodology: SPIN. Question 1 must be exactly: If you don't solve this problem, what does that look like 12 months from now? Generate 14 additional open-ended questions numbered 2 to 15. Do not use binary or leading questions."
+      },
+      "expect": {
+        "required_strings": ["1. If you don't solve this problem, what does that look like 12 months from now?", "15."],
+        "forbidden_strings": ["##", "**", "|"],
+        "max_words": 420
+      }
+    },
+    {
+      "id": "summary-professional-services-pilot",
+      "body": {
+        "type": "summary",
+        "profileContext": "You are PitchOS, an AI assistant for enterprise B2B solutions engineers and account executives. Be precise, factual, and concise. Write plain text only. Do not invent owners, dates, commitments, or metrics.",
+        "userPrompt": "Generate a structured post-call summary. Raw notes: Priya confirmed six fee earners each spend about four hours per week checking incoming packs. Rework happens when names or dates do not match, but no error count is tracked. Priya will send ten anonymised sample packs by Friday. Idris will return a bounded pilot outline and security questions within three business days of receiving them. Managing partner must approve any pilot. No price was agreed. Deal context: Northbank Conveyancing, discovery stage. Output sections: Summary, Action Items, Commitments Made, Recommended Next Step."
+      },
+      "expect": {
+        "required_strings": ["Summary:", "Action Items:", "Commitments Made:", "Recommended Next Step:"],
+        "forbidden_strings": ["##", "**", "|"],
+        "max_words": 260
+      }
+    },
+    {
+      "id": "summary-cybersecurity-review",
+      "body": {
+        "type": "summary",
+        "profileContext": "You are PitchOS, an AI assistant for enterprise B2B solutions engineers and account executives. Be precise, factual, and concise. Write plain text only. Do not invent owners, dates, commitments, or metrics.",
+        "userPrompt": "Generate a structured post-call summary. Raw notes: Marcus said technical validation is complete. Legal needs the data processing addendum and subprocessor list. Procurement requested a 20 percent discount; Marcus did not endorse it. Deployment before the October audit remains the target. Elena from our team will send the legal pack tomorrow. Marcus will schedule a procurement call for next week. No termination clause was accepted. Deal context: Alder Cloud, negotiation stage. Output sections: Summary, Action Items, Commitments Made, Recommended Next Step."
+      },
+      "expect": {
+        "required_strings": ["Summary:", "Action Items:", "Commitments Made:", "Recommended Next Step:"],
+        "forbidden_strings": ["##", "**", "|"],
+        "max_words": 260
+      }
+    },
+    {
+      "id": "email-professional-services-pilot",
+      "body": {
+        "type": "email",
+        "profileContext": "You are PitchOS, an AI assistant for enterprise B2B solutions engineers and account executives. The PitchOS user and email sender is Idris. Be warm, professional, precise, and factual. Write plain text only. Do not invent commitments.",
+        "userPrompt": "Generate a professional follow-up email under 150 words. Call summary: Priya confirmed six fee earners spend about four hours each per week checking incoming packs. Priya will send ten anonymised sample packs by Friday. Idris will return a bounded pilot outline and security questions within three business days of receipt. The managing partner must approve any pilot. No price was agreed. Deal context: Contact: Priya Shah, Operations Director. End with a separate Subject: line."
+      },
+      "expect": {
+        "required_strings": ["Priya", "Subject:"],
+        "required_patterns": ["four hours(?:\\s+\\w+){0,2}\\s+each|each(?:\\s+\\w+){0,4}\\s+four hours", "\\byou(?:'ll| will) (?:send|share)\\b", "\\bI(?:'ll| will) (?:return|send|provide|prepare)\\b"],
+        "forbidden_strings": ["##", "**", "|", "---", "[", "20 percent", "Idris will", "Idris has", "he'll"],
+        "forbidden_patterns": ["pricing.{0,25}remains open", "open for (?:future|further).{0,20}(?:pricing|discussion)", "future pricing discussion"],
+        "max_words": 140
+      }
+    },
+    {
+      "id": "email-cybersecurity-review",
+      "body": {
+        "type": "email",
+        "profileContext": "You are PitchOS, an AI assistant for enterprise B2B solutions engineers and account executives. The PitchOS user and email sender is Idris. Elena is on the sender's team. Be warm, professional, precise, and factual. Write plain text only. Do not invent commitments.",
+        "userPrompt": "Generate a professional follow-up email under 150 words. Call summary: Technical validation is complete. Elena will send the data processing addendum and subprocessor list tomorrow. Marcus will schedule a procurement call for next week. Procurement requested a 20 percent discount, but no discount or termination clause was accepted. Deployment before the October audit remains the target. Deal context: Contact: Marcus Green, CISO. End with a separate Subject: line."
+      },
+      "expect": {
+        "required_strings": ["Marcus", "Subject:"],
+        "required_patterns": ["(?:\\byou(?:'ll| will)?\\b.{0,35}\\b(?:schedule|scheduling|arrange|arranging)\\b|\\bplease\\b.{0,30}\\b(?:schedule|arrange)\\b)", "(?:discount.{0,80}(?:not|no).{0,20}(?:agreed|accepted)|(?:no|neither).{0,35}discount)", "(?:termination clause.{0,80}(?:not|no).{0,20}(?:agreed|accepted)|(?:no|neither).{0,35}termination clause)"],
+        "forbidden_strings": ["##", "**", "|", "---", "[", "Marcus will", "technical validation meeting", "discount approved", "termination clause accepted"],
+        "forbidden_patterns": ["technical validation (?:meeting|session|call|discussion)", "(?:cannot|can't|aren't able|not in a position|won't|will not).{0,40}(?:discount|pricing)", "no (?:price|pricing) was agreed", "standard terms", "open to (?:discuss|explor)", "went smoothly"],
+        "max_words": 140
+      }
+    }
+  ]
+}

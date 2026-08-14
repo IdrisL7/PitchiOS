@@ -1,0 +1,99 @@
+{
+  "captured_at": "2026-08-09T14:03:06.237Z",
+  "endpoint": "generate",
+  "deployed_version": 9,
+  "email_model": "claude-sonnet-5",
+  "transport_note": "Captured through authenticated DevRemote AIService streaming path after production deployment; every request returned HTTP 200 text/event-stream with a non-empty completed stream.",
+  "cases": [
+    {
+      "id": "email-professional-services-pilot",
+      "iteration": 1,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Next Steps on Pilot and Sample Packs\n\nHi Priya,\n\nThank you for the conversation today. It was helpful to hear that six fee earners spend about four hours each per week reviewing incoming packs.\n\nTo confirm next steps: you'll send ten anonymised sample packs by Friday. Once I receive them, I'll return a bounded pilot outline along with our security questions within three business days.\n\nAs discussed, any pilot will need the managing partner's approval before moving forward. Please also note that pricing was not agreed at this stage.\n\nI appreciate you sharing these details and look forward to reviewing the sample packs once they arrive. Please let me know if anything changes on your end in the meantime.\n\nBest regards,\nIdris",
+      "elapsed_ms": 6068
+    },
+    {
+      "id": "email-cybersecurity-review",
+      "iteration": 1,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Technical Validation Complete and Next Steps\n\nMarcus,\n\nThank you for the conversation today. I'm glad we were able to confirm that technical validation is complete.\n\nAs next steps, Elena will send over the data processing addendum and subprocessor list tomorrow. On your end, you'll schedule a procurement call for next week.\n\nI also want to note that procurement's request for a 20 percent discount was not agreed or accepted, and no termination clause has been accepted at this stage.\n\nWe remain aligned on the goal of deployment ahead of the October audit, and I look forward to continuing to work toward that target together.\n\nPlease let me know if anything changes on your side before the procurement call, and thank you again for your time.\n\nBest regards,\nIdris",
+      "elapsed_ms": 5440
+    },
+    {
+      "id": "email-professional-services-pilot",
+      "iteration": 2,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Pilot Next Steps\n\nPriya,\n\nThank you for the conversation today. To confirm what we discussed: you shared that six fee earners spend about four hours each per week checking incoming packs, which was very helpful context.\n\nAs agreed, you will send ten anonymised sample packs by Friday. Once I receive them, I will return a bounded pilot outline along with our security questions within three business days.\n\nI understand any pilot will require approval from your managing partner, and I want to flag that no pricing was agreed at this stage.\n\nPlease let me know if anything changes on your end before Friday, and I'll be ready to move quickly once the packs arrive.\n\nThank you again for your time.\n\nBest regards,\nIdris",
+      "elapsed_ms": 5024
+    },
+    {
+      "id": "email-cybersecurity-review",
+      "iteration": 2,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Technical Validation and Next Steps\n\nMarcus,\n\nThank you for the conversation today. I'm glad we've confirmed that technical validation is complete.\n\nAs next steps: Elena will send over the data processing addendum and subprocessor list tomorrow. You'll schedule a procurement call for next week, which we look forward to.\n\nI also want to note that procurement's request for a 20 percent discount was discussed, but no discount or termination clause was agreed or accepted at this stage.\n\nDeployment ahead of the October audit remains our shared target, and we're committed to keeping things moving toward that timeline.\n\nPlease let me know if anything changes on your end or if there's additional information you need ahead of the procurement call.\n\nLooking forward to continuing to work through this together.\n\nBest regards,\nIdris",
+      "elapsed_ms": 5127
+    },
+    {
+      "id": "email-professional-services-pilot",
+      "iteration": 3,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Sample Packs and Pilot Outline\n\nHi Priya,\n\nThank you for the conversation today. It was helpful to hear that six fee earners are spending about four hours each per week checking incoming packs.\n\nAs discussed, you will send ten anonymised sample packs by Friday. Once I receive them, I will return a bounded pilot outline along with our security questions within three business days.\n\nAs noted, any pilot will require your managing partner's approval before moving forward. I also want to confirm that no pricing was agreed during our discussion.\n\nPlease let me know if anything changes on your end before Friday, and I look forward to reviewing the sample packs once they arrive.\n\nBest regards,\nIdris",
+      "elapsed_ms": 4993
+    },
+    {
+      "id": "email-cybersecurity-review",
+      "iteration": 3,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Technical Validation Complete and Next Steps\n\nMarcus,\n\nThank you for the conversation today. I'm glad we were able to confirm that technical validation is complete.\n\nAs a next step, Elena will send over the data processing addendum and subprocessor list tomorrow. I understand you'll be scheduling a procurement call for next week, and I look forward to connecting then.\n\nOn pricing, procurement requested a 20 percent discount; this was not agreed or accepted at this stage. No termination clause has been accepted either.\n\nDeployment ahead of the October audit remains our shared target, and I'll do what I can on my end to help support that timeline.\n\nPlease let me know if anything changes or if you need additional information ahead of the procurement call.\n\nBest regards,\nIdris",
+      "elapsed_ms": 5239
+    },
+    {
+      "id": "email-professional-services-pilot",
+      "iteration": 4,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Pilot Outline and Next Steps\n\nHi Priya,\n\nThank you for the conversation today. It was helpful to hear that six fee earners currently spend about four hours each per week checking incoming packs.\n\nAs discussed, I understand you'll send ten anonymised sample packs by Friday. Once I receive them, I will return a bounded pilot outline along with our security questions within three business days.\n\nI also want to confirm my understanding that any pilot will need approval from your managing partner before proceeding. No pricing was agreed during our discussion, and I want to be clear that I'm not assuming any terms on that front at this stage.\n\nI'll follow up as soon as I've reviewed the sample packs. Please let me know if anything changes on your end in the meantime.\n\nThanks again, Priya, and I look forward to the next steps.\n\nBest regards,\nIdris",
+      "elapsed_ms": 5221
+    },
+    {
+      "id": "email-cybersecurity-review",
+      "iteration": 4,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Technical Validation and Next Steps\n\nHi Marcus,\n\nThank you for the conversation today. I wanted to summarize where things stand.\n\nTechnical validation is now complete. Elena will send over the data processing addendum and subprocessor list tomorrow for your review.\n\nOn your end, you'll be scheduling a procurement call for next week.\n\nI also want to note that procurement's request for a 20 percent discount was not agreed or accepted, and no termination clause has been accepted at this stage.\n\nWe remain focused on the target of completing deployment before the October audit, and I'll keep working with you to keep things on track toward that timeline.\n\nPlease let me know if you have any questions in the meantime, and I look forward to connecting again soon.\n\nBest regards,\nIdris",
+      "elapsed_ms": 4471
+    },
+    {
+      "id": "email-professional-services-pilot",
+      "iteration": 5,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Pilot Outline and Sample Packs\n\nHi Priya,\n\nThank you for the conversation today. It was helpful to hear that six fee earners currently spend about four hours each per week checking incoming packs.\n\nAs discussed, you'll send ten anonymised sample packs by Friday. Once I receive them, I'll return a bounded pilot outline along with our security questions within three business days.\n\nI understand any pilot will need approval from the managing partner before moving forward. For clarity, no pricing was agreed during our call.\n\nPlease let me know if anything changes on your end regarding the sample packs or timing. I look forward to reviewing them and putting together the outline.\n\nThanks again, Priya, and I'll be in touch soon.\n\nBest regards,\nIdris",
+      "elapsed_ms": 5247
+    },
+    {
+      "id": "email-cybersecurity-review",
+      "iteration": 5,
+      "status": 200,
+      "content_type": "text/event-stream",
+      "stream_completed": true,
+      "output": "Subject: Follow-Up: Technical Validation and Next Steps\n\nMarcus,\n\nThank you for the conversation. I wanted to recap where things stand.\n\nTechnical validation is now complete. Elena will send over the data processing addendum and subprocessor list tomorrow. As discussed, you'll schedule a procurement call for next week.\n\nI also want to note that procurement's request for a 20 percent discount was not agreed or accepted, and no termination clause was accepted at this stage.\n\nDeployment ahead of the October audit remains the target, and we'll keep working toward that timeline.\n\nPlease let me know if anything above doesn't match your understanding, and I look forward to connecting again once the procurement call is on the calendar.\n\nBest regards,\nIdris",
+      "elapsed_ms": 4274
+    }
+  ]
+}

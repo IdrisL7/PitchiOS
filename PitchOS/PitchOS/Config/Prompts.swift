@@ -115,7 +115,7 @@ enum Prompts {
     // MARK: - Follow-Up Email
 
     enum FollowUpEmail {
-        static let version = "email_v1.0"
+        static let version = "email_v1.1"
 
         static func userPrompt(summary: String, dealContext: String?) -> String {
             """
@@ -132,7 +132,20 @@ enum Prompts {
             3. Confirm agreed next steps with owners
             4. Close with a specific call-to-action
 
-            Tone: warm but professional. Enterprise B2B standard. Under 150 words.
+            Sender and recipient rules:
+            - The PitchOS profile user is the sender. Write the sender's actions as "I" or "we", never as their name or in the third person.
+            - The Contact named in Deal context is the recipient. Start with that contact's first name and express the contact's actions as "you" or "your", never in the third person.
+            - If Deal context has no Contact, use a named prospect from the summary only when exactly one is unambiguous; otherwise use a neutral greeting and do not guess.
+            - Never output brackets, placeholders, Markdown, or a horizontal rule. If a sender or recipient name is unavailable, omit it.
+            - Preserve every owner, quantity, qualifier, and deadline exactly. Changing third person to first or second person must never transfer responsibility.
+            - Thank the recipient for the conversation without naming or characterising the meeting. Do not infer a meeting type from a completed milestone.
+            - If a commercial request was not accepted, say only that it was not agreed or accepted. Do not turn that absence into a refusal, approval, willingness, or new negotiating position.
+            - Do not generalise a specific unaccepted term into a claim about all pricing. Mention general pricing status only when the source explicitly states it, and do not add future implications.
+            - Do not omit an explicitly mentioned requested, rejected, or unaccepted commercial term.
+            - Do not invent, accept, or strengthen commitments, commercial terms, owners, dates, or outcomes.
+            - The entire response, including subject, greeting, and sign-off, must be 120 words or fewer.
+
+            Tone: warm but professional. Enterprise B2B standard.
             Do not include a subject line — generate one separately at the end prefixed with "Subject: ".
             """
         }
@@ -252,7 +265,7 @@ enum Prompts {
     // MARK: - Meeting Brief
 
     enum MeetingBrief {
-        static let version = "brief_v1.0"
+        static let version = "brief_v1.1"
 
         static func userPrompt(dealContext: String?) -> String {
             """
@@ -271,13 +284,21 @@ enum Prompts {
             Key Risks:
             2-3 potential objections or concerns to anticipate going in.
 
+            Objections and Counters:
+            Give the top 3 likely objections for this prospect. For each one,
+            write an "Objection:" line and a "Counter:" line. Keep each counter
+            concise, grounded in the supplied profile and deal context. If the
+            context does not establish a fact, label it as a hypothesis or say
+            what to validate; never invent proof, commitments, incidents, or
+            commercial terms.
+
             Recommended Focus:
             1-2 sentences on the angle most likely to resonate — what to lead with and why.
 
             Suggested First Question:
             One strong, open-ended question to open the conversation.
 
-            Keep each section tight and specific. No generic filler. Under 200 words total.
+            Keep each section tight and specific. No generic filler. Under 280 words total.
             Write in plain text — no markdown, no special characters.
             """
         }

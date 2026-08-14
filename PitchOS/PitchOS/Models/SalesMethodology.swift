@@ -13,6 +13,13 @@ enum SalesMethodology: String, CaseIterable, Identifiable, Codable, Sendable {
 
     var id: String { rawValue }
 
+    var displayName: String {
+        switch self {
+        case .other: return "General / Not sure"
+        default: return rawValue
+        }
+    }
+
     var description: String {
         switch self {
         case .meddic:
@@ -28,7 +35,7 @@ enum SalesMethodology: String, CaseIterable, Identifiable, Codable, Sendable {
         case .sandler:
             return "Pain, Budget, Decision — disqualify early, close with conviction"
         case .other:
-            return "Custom or hybrid methodology"
+            return "A flexible discovery structure with no named methodology"
         }
     }
 
@@ -40,7 +47,7 @@ enum SalesMethodology: String, CaseIterable, Identifiable, Codable, Sendable {
         case .bant:      return "SMB, transactional, short sales cycles"
         case .challenger: return "Competitive markets, status-quo disruption"
         case .sandler:   return "High-value deals, trusted advisor relationships"
-        case .other:     return "Flexible — apply your own framework"
+        case .other:     return "Any B2B seller — start here if you're not sure"
         }
     }
 

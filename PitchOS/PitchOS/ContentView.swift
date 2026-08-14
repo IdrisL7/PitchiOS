@@ -88,6 +88,8 @@ struct MainTabView: View {
 // MARK: - Generate Hub
 
 struct GenerateView: View {
+    @Environment(AppState.self) private var appState
+    @State private var startHereDismissed = false
 
     private struct ToolEntry: Identifiable {
         let id = UUID()
@@ -139,6 +141,10 @@ struct GenerateView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: Spacing.xl) {
+                    if appState.currentUserId != nil && !startHereDismissed {
+                        startHereCard
+                    }
+
                     toolSection("Before the Call", tools: beforeCall)
                     toolSection("During the Call", tools: duringCall)
                     toolSection("After the Call", tools: afterCall)
@@ -149,6 +155,70 @@ struct GenerateView: View {
             }
             .navigationTitle("Generate")
         }
+        .onAppear {
+            refreshStartHereState()
+        }
+        .onChange(of: appState.currentUserId) { _, _ in
+            refreshStartHereState()
+        }
+    }
+
+    static func startHereDismissalKey(for userID: UUID?) -> String? {
+        guard let userID else { return nil }
+        return "pitchos.startHere.dismissed.\(userID.uuidString)"
+    }
+
+    private var startHereKey: String? {
+        Self.startHereDismissalKey(for: appState.currentUserId)
+    }
+
+    private func refreshStartHereState() {
+        guard let key = startHereKey else {
+            startHereDismissed = false
+            return
+        }
+        startHereDismissed = UserDefaults.standard.bool(forKey: key)
+    }
+
+    private var startHereCard: some View {
+        VStack(alignment: .leading, spacing: Spacing.sm) {
+            Label("Start here", systemImage: "sparkles")
+                .font(.rounded(.footnote, weight: .semibold))
+                .foregroundStyle(Color.pitchAccent)
+                .textCase(.uppercase)
+                .tracking(0.8)
+
+            Text("Prepare for your next call")
+                .font(.rounded(.title3, weight: .bold))
+
+            Text("Start with Meeting Brief. It turns your profile into a concise pre-call plan. Add a deal under Deals when you want company-specific context.")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+
+            HStack(spacing: Spacing.sm) {
+                NavigationLink {
+                    MeetingBriefView()
+                } label: {
+                    Label("Open Meeting Brief", systemImage: "arrow.right")
+                        .font(.rounded(.callout, weight: .semibold))
+                        .foregroundStyle(Color.pitchAccent)
+                }
+
+                Spacer()
+
+                Button("Dismiss") {
+                    startHereDismissed = true
+                    if let startHereKey {
+                        UserDefaults.standard.set(true, forKey: startHereKey)
+                    }
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
+            }
+        }
+        .padding(Spacing.md)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .glassCard(isAIContent: true)
     }
 
     @ViewBuilder

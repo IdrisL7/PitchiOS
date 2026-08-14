@@ -13,7 +13,7 @@ struct SignUpView: View {
                 Text("Create Account")
                     .font(.title.bold())
 
-                Text("Start your free trial — 50 AI generations per month")
+                Text("Start with 10 free AI generations this month")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)

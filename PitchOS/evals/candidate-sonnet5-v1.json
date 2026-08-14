@@ -1,0 +1,73 @@
+{
+  "captured_at": "2026-08-08T23:10:17Z",
+  "cases": [
+    {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 9815,
+      "id": "brief-professional-services-discovery",
+      "output": "PRE-CALL BRIEF: NORTHBANK CONVEYANCING\n\nProspect Snapshot\n- Contact: Priya Shah, Operations Director\n- Firm size: 22 staff, property/conveyancing focus\n- Stage: Discovery\n- Current process: Manual handling of emailed property documents; turnaround inconsistent across fee earners\n- Known interest: Automated document checking\n\nLikely Priorities\n- Reducing turnaround variability to improve client experience and referral flow\n- Standardising document checking to reduce fee earner workload\n- Minimising risk of missed or incorrect document handling\n\nKey Risks\n- No confirmed volumes or error rates shared yet — value case unproven\n- Priya may not be economic buyer; managing partner approval likely required\n- Risk of discovery stalling if pain is assumed rather than quantified\n\nRecommended Focus\n- Quantify current-state pain: volumes, turnaround times, rework/error frequency\n- Identify who owns budget and risk accountability (likely managing partner)\n- Map manual process step-by-step to expose hidden cost and compliance exposure\n- Avoid solution-pitching until metrics and decision process are confirmed\n\nSuggested First Question\n\"Can you walk me through what happens from the moment a property document lands in someone's inbox to when it's actioned — and where that process tends to slow down or go wrong?\"",
+      "status": 200,
+      "stream_completed": true
+    },
+    {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 6010,
+      "id": "brief-cybersecurity-negotiation",
+      "output": "# Pre-Call Meeting Brief: Alder Cloud\n\n**Prospect Snapshot**\n- Contact: Marcus Green, CISO\n- Stage: Negotiation\n- Technical validation: Passed\n- Open items: Procurement seeking 20% price reduction and 30-day termination clause; deployment timeline tied to October audit\n\n**Likely Priorities**\n- Marcus: De-risking the October audit deadline, protecting technical credibility after validation win\n- Procurement: Cost reduction and contract flexibility to limit exposure\n\n**Key Risks**\n- No approved concession exists yet - risk of overpromising before internal alignment\n- 30-day termination clause could undermine deal economics and signal weak buyer confidence\n- Timeline pressure may push Marcus to accept unfavorable terms just to hit audit date, creating future renewal risk\n\n**Recommended Focus**\n- Reframe discount conversation around value delivered vs. price given\n- Probe the real driver behind the termination clause - is it risk mitigation or leverage\n- Anchor urgency on audit readiness, not contract concessions, to protect deal terms\n\n**Suggested First Question**\n\"Marcus, if the October audit deadline weren't a factor, would the 30-day termination clause still be a priority for your team?\"",
+      "status": 200,
+      "stream_completed": true
+    },
+    {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 4409,
+      "id": "questions-professional-services-meddic",
+      "output": "1. If you don't solve this problem, what does that look like 12 months from now?\n\n2. Walk me through a typical day in your operations team when documents arrive from clients and opposing solicitors.\n\n3. How are you currently tracking which documents have been checked and by whom?\n\n4. What happens when errors slip through your current manual checking process?\n\n5. How much time would you estimate your team spends each week on document validation alone?\n\n6. What visibility do you have into your current error rates across different document types?\n\n7. Can you describe the biggest operational bottleneck you face during peak transaction volumes?\n\n8. How do your team members currently communicate about document status to other departments like conveyancing or management?\n\n9. What metrics or KPIs is leadership currently monitoring around document handling?\n\n10. Tell me about a recent incident where a document issue caused problems downstream.\n\n11. How scalable do you think your current manual process is if your transaction volumes increased by 30 percent next year?\n\n12. What tools or systems are your team currently using to manage documents?\n\n13. How do your clients or opposing parties typically respond to delays in your document turnaround?\n\n14. What would an ideal document workflow process look like from your perspective?\n\n15. How are you currently justifying headcount or resource decisions to leadership based on document handling volumes?",
+      "status": 200,
+      "stream_completed": true
+    },
+    {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 4828,
+      "id": "questions-cybersecurity-spin",
+      "output": "1. If you don't solve this problem, what does that look like 12 months from now?\n\n2. Walk me through your current process when a vulnerability is identified - from discovery through to verification that it's actually been fixed.\n\n3. What happens when your auditors come in for SOC 2 renewal and ask to see your remediation evidence?\n\n4. How are you currently tracking which vulnerabilities have been assigned to which team members, and how do people know what they're responsible for?\n\n5. Tell me about a time recently when you lost track of a remediation item - what was the impact?\n\n6. With your security headcount staying flat, how are you planning to handle an increase in vulnerability volume if it happens?\n\n7. What visibility do your executive stakeholders have right now into your security remediation status?\n\n8. How much time do you estimate your team spends each week pulling together data from spreadsheets just to answer basic questions about where things stand?\n\n9. When you're running SOC 2 prep, what's the most time-consuming part of demonstrating compliance?\n\n10. What would change about your audit preparation if you could generate your remediation evidence in real time rather than scrambling to assemble it beforehand?\n\n11. How are you currently handling situations where the same vulnerability exists across multiple systems or applications?\n\n12. What gaps have you seen in your current approach that make you most uncomfortable heading into your renewal audit?\n\n13. If you could eliminate one manual process in your remediation workflow, which one would have the biggest impact on your team?\n\n14. How do you currently measure whether your remediation efforts are actually reducing your overall security risk?\n\n15. What would it take for your security program to handle the same remediation volume with the same headcount you have today?",
+      "status": 200,
+      "stream_completed": true
+    },
+    {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 5472,
+      "id": "summary-professional-services-pilot",
+      "output": "# Post-Call Summary: Northbank Conveyancing\n\n## Summary\nDiscovery call with Priya at Northbank Conveyancing. Six fee earners currently spend approximately four hours per week each reviewing incoming packs. Rework is triggered by mismatched names or dates, though no formal error count is tracked. No pricing has been discussed or agreed. Any pilot will require managing partner approval before proceeding.\n\n## Action Items\n- Priya to send ten anonymised sample packs\n- Idris to review sample packs upon receipt\n- Idris to prepare a bounded pilot outline\n- Idris to prepare a list of security questions for Northbank\n- Priya to coordinate managing partner approval for any pilot\n\n## Commitments Made\n- Priya: will send ten anonymised sample packs by Friday\n- Idris: will return the pilot outline and security questions within three business days of receiving the sample packs\n\n## Recommended Next Step\nConfirm receipt of the ten anonymised sample packs from Priya, then deliver the bounded pilot outline and security questions within the committed three-business-day window. Align with Priya on scheduling managing partner review ahead of any pilot proposal.",
+      "status": 200,
+      "stream_completed": true
+    },
+    {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 9672,
+      "id": "summary-cybersecurity-review",
+      "output": "Summary\nAlder Cloud deal is in the negotiation stage. Marcus confirmed technical validation is complete. Legal on the customer side requires the data processing addendum and subprocessor list before proceeding. Procurement raised a request for a 20 percent discount, which Marcus did not endorse. The target remains deployment before the October audit. No termination clause has been accepted by either party.\n\nAction Items\n- Elena: Send the legal pack (data processing addendum and subprocessor list) to Alder Cloud legal team tomorrow.\n- Marcus: Schedule a procurement call for next week to address the discount request.\n\nCommitments Made\n- Elena committed to sending the legal pack tomorrow.\n- Marcus committed to scheduling a procurement call next week.\n- No commitment was made regarding the 20 percent discount.\n- No commitment was made regarding a termination clause.\n\nRecommended Next Step\nConfirm Elena's delivery of the legal pack and prepare discount-related talking points ahead of Marcus's procurement call next week, keeping the October audit deployment target in view.",
+      "status": 200,
+      "stream_completed": true
+    },
+    {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 2868,
+      "id": "email-professional-services-pilot",
+      "output": "Hi Priya,\n\nThanks for the helpful call today. I'm impressed by the clear opportunity we've identified—24 hours weekly on incoming pack review across your fee earners represents significant potential for streamlining.\n\nI'm looking forward to receiving the ten anonymised sample packs by Friday. Once they arrive, I'll prioritise preparing a bounded pilot outline and compiling our security questionnaire, targeting delivery within three business days.\n\nI understand the managing partner's approval is required before we proceed. I'm happy to provide any additional information needed to support that decision.\n\nWe'll connect once I've had a chance to review your materials.\n\nBest regards,\n[Your name]\n\n---\n\nSubject: Follow-up: Pilot proposal and sample packs timeline",
+      "status": 200,
+      "stream_completed": true
+    },
+    {
+      "content_type": "text/event-stream",
+      "elapsed_ms": 3821,
+      "id": "email-cybersecurity-review",
+      "output": "Thank you for the productive conversation today. We've made excellent progress on your evaluation.\n\nElena will send the data processing addendum and subprocessor list tomorrow, which should address your compliance requirements ahead of the October audit.\n\nMarcus will reach out next week to schedule your procurement call. We're aligned on your deployment timeline and confident we can meet your audit deadline.\n\nRegarding pricing, we appreciate procurement's inquiry. Our current terms reflect the value and support we deliver. We're committed to working within your budget parameters and would welcome discussing how our solution drives ROI for your organization.\n\nWe're excited to move forward and answer any questions during the procurement discussion.\n\nBest regards,\n[Your Name]\n\nSubject: Follow-Up: Technical Validation Complete and Next Steps",
+      "status": 200,
+      "stream_completed": true
+    }
+  ],
+  "function_name": "generate-sonnet5-eval",
+  "function_version": 1,
+  "model_candidate": "claude-sonnet-5",
+  "schema_version": 1
+}

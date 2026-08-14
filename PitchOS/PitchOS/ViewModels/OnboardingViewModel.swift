@@ -17,7 +17,7 @@ final class OnboardingViewModel {
     var buyerTitleInput = ""
 
     // Step 4: Methodology & Differentiators
-    var methodology = "MEDDIC"
+    var methodology = SalesMethodology.other.rawValue
     var differentiators: [String] = []
     var differentiatorInput = ""
 

@@ -72,6 +72,7 @@
 		E9AFBDD4F399F47146987AA2 /* ProfilePromptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832740B2B275D4DB27786B16 /* ProfilePromptTests.swift */; };
 		ED4F4EBDB49DC0817F219CEC /* ICPEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAF12F608765DFCC96F8EE7 /* ICPEditView.swift */; };
 		F01AC7D5EDE1B70341AAEFF9 /* OutputService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3803FC58049DADEB3786CB9 /* OutputService.swift */; };
+		E2BE6A4D46E4428F8AE50DEFB8F3FF11 /* RatingPromptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86540C03D8754B04905A80A3181E89D6 /* RatingPromptService.swift */; };
 		A1B2C3D4E5F60718293A4B5C /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D3E4F5061728394A5B6C /* PurchaseService.swift */; };
 		FFA8B7C6D5E4F3E2D1 /* Error+Friendly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A2B3C4D5E6F7A8 /* Error+Friendly.swift */; };
 /* End PBXBuildFile section */
@@ -149,6 +150,7 @@
 		DFCBC7D24F2B51D5B65A122C /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		E2104B8450CC9B8EA9D94676 /* DealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListViewModel.swift; sourceTree = "<group>"; };
 		E3803FC58049DADEB3786CB9 /* OutputService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputService.swift; sourceTree = "<group>"; };
+		86540C03D8754B04905A80A3181E89D6 /* RatingPromptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPromptService.swift; sourceTree = "<group>"; };
 		E41DC0957B62E1FA751F12F7 /* PitchOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PitchOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C6C28E253DAF2F8DC9207E /* PitchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F210E481E378A9D0A4A4E3BE /* DealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealListView.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				06115BDA71B14440934CB2C4 /* AuthService.swift */,
 				51423DD354A7ACEA71ECEC84 /* DealService.swift */,
 				E3803FC58049DADEB3786CB9 /* OutputService.swift */,
+				86540C03D8754B04905A80A3181E89D6 /* RatingPromptService.swift */,
 				07B38CA6B7359285F292FB20 /* ProfileService.swift */,
 				B1C2D3E4F5061728394A5B6C /* PurchaseService.swift */,
 				C33B135C2C6ED2EDF455509A /* SpeechService.swift */,
@@ -564,6 +567,7 @@
 				6E7B1A2577CD0DC691C58481 /* OnboardingViewModel.swift in Sources */,
 				D33AAEA3C7D6528AE5398FA4 /* Output.swift in Sources */,
 				F01AC7D5EDE1B70341AAEFF9 /* OutputService.swift in Sources */,
+				E2BE6A4D46E4428F8AE50DEFB8F3FF11 /* RatingPromptService.swift in Sources */,
 				84A8B24C7E86096D484D3C68 /* PitchOSApp.swift in Sources */,
 				810C2F78C2F4A9CB39ADCDA3 /* PostCallView.swift in Sources */,
 				C6B56240CCEAA728F8EC99FA /* PostCallViewModel.swift in Sources */,
