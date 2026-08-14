@@ -14,6 +14,7 @@
 		22153F69D264A55C50BC4FD8 /* DealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F210E481E378A9D0A4A4E3BE /* DealListView.swift */; };
 		225768111F134D71B93ECFAD /* MeetingBriefViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC53FB7BFF49D78C1CF7EC /* MeetingBriefViewModel.swift */; };
 		24556682749263954C4DBE83 /* DealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51423DD354A7ACEA71ECEC84 /* DealService.swift */; };
+		B2C3D4E5F60718293A4B5C6D /* BriefCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F60718293A4B5C6D7E /* BriefCacheService.swift */; };
 		2724F25FAD2762A6DAF3F154 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D63D9BF476C78410407D7D4 /* AppState.swift */; };
 		354CC8D03160D87D98D64110 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5A2031F0A0D5DB4B9A1D02 /* Profile.swift */; };
 		35DBDA7961DC7EA7134276F3 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF06D69536C2E946B5F0E4 /* RatingView.swift */; };
@@ -114,6 +115,7 @@
 		4EBC53FB7BFF49D78C1CF7EC /* MeetingBriefViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingBriefViewModel.swift; sourceTree = "<group>"; };
 		50BA3FE04BA03D74B145E289 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		51423DD354A7ACEA71ECEC84 /* DealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealService.swift; sourceTree = "<group>"; };
+		C3D4E5F60718293A4B5C6D7E /* BriefCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefCacheService.swift; sourceTree = "<group>"; };
 		52A26C751A8EE8618AB65EC4 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		55A4530E0C7339F2BF699ABD /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
 		5D7A9682BE1ED8E3F5F523F1 /* ObjectionHandlerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectionHandlerView.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				3159ED8B65755E18CA47D08C /* AIService.swift */,
 				06115BDA71B14440934CB2C4 /* AuthService.swift */,
 				51423DD354A7ACEA71ECEC84 /* DealService.swift */,
+				C3D4E5F60718293A4B5C6D7E /* BriefCacheService.swift */,
 				E3803FC58049DADEB3786CB9 /* OutputService.swift */,
 				86540C03D8754B04905A80A3181E89D6 /* RatingPromptService.swift */,
 				07B38CA6B7359285F292FB20 /* ProfileService.swift */,
@@ -567,6 +570,7 @@
 				6E7B1A2577CD0DC691C58481 /* OnboardingViewModel.swift in Sources */,
 				D33AAEA3C7D6528AE5398FA4 /* Output.swift in Sources */,
 				F01AC7D5EDE1B70341AAEFF9 /* OutputService.swift in Sources */,
+				B2C3D4E5F60718293A4B5C6D /* BriefCacheService.swift in Sources */,
 				E2BE6A4D46E4428F8AE50DEFB8F3FF11 /* RatingPromptService.swift in Sources */,
 				84A8B24C7E86096D484D3C68 /* PitchOSApp.swift in Sources */,
 				810C2F78C2F4A9CB39ADCDA3 /* PostCallView.swift in Sources */,

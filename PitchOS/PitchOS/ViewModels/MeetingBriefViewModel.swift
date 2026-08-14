@@ -7,11 +7,14 @@ final class MeetingBriefViewModel {
     var isStreaming = false
     var error: String?
     var lastOutputId: UUID?
+    var isCachedLocally = false
+    var cachedAt: Date?
 
     private let aiService: AIService
     private let outputService: OutputService
     private let usageService: UsageService
     private let ratingPromptService: RatingPromptService
+    private let briefCacheService: BriefCacheService
     private let profile: Profile
     var deal: Deal?
 
@@ -20,6 +23,7 @@ final class MeetingBriefViewModel {
         outputService: OutputService,
         usageService: UsageService,
         ratingPromptService: RatingPromptService = .shared,
+        briefCacheService: BriefCacheService = .shared,
         profile: Profile,
         deal: Deal? = nil
     ) {
@@ -27,12 +31,30 @@ final class MeetingBriefViewModel {
         self.outputService = outputService
         self.usageService = usageService
         self.ratingPromptService = ratingPromptService
+        self.briefCacheService = briefCacheService
         self.profile = profile
         self.deal = deal
     }
 
     var canGenerate: Bool { !isStreaming }
     var hasContent: Bool { !briefText.isEmpty }
+
+    func loadCachedBrief() async {
+        guard briefText.isEmpty, !isStreaming else { return }
+
+        do {
+            guard let cached = try await briefCacheService.load(
+                userId: profile.id,
+                dealId: deal?.id
+            ) else { return }
+
+            briefText = cached.briefText
+            cachedAt = cached.createdAt
+            isCachedLocally = true
+        } catch {
+            // A cache read must never block the live generation path.
+        }
+    }
 
     func generate() async {
         guard await usageService.canGenerate(userId: profile.id, plan: profile.plan) else {
@@ -43,6 +65,8 @@ final class MeetingBriefViewModel {
 
         isStreaming = true
         briefText = ""
+        isCachedLocally = false
+        cachedAt = nil
         error = nil
 
         var tokenCount = 0
@@ -59,6 +83,22 @@ final class MeetingBriefViewModel {
             }
 
             HapticService.shared.generationComplete()
+
+            let generatedAt = Date()
+            let cachedBrief = CachedBrief(
+                userId: profile.id,
+                dealId: deal?.id,
+                briefText: briefText,
+                promptVersion: Prompts.MeetingBrief.version,
+                createdAt: generatedAt
+            )
+            do {
+                try await briefCacheService.save(cachedBrief)
+                isCachedLocally = true
+                cachedAt = generatedAt
+            } catch {
+                // Keep the generated brief usable even if local storage fails.
+            }
 
             let output = Output(
                 id: UUID(),
@@ -95,5 +135,7 @@ final class MeetingBriefViewModel {
         briefText = ""
         error = nil
         lastOutputId = nil
+        isCachedLocally = false
+        cachedAt = nil
     }
 }

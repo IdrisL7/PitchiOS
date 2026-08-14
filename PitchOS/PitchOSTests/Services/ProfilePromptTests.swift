@@ -124,6 +124,71 @@ struct ActivationRoutingTests {
     }
 }
 
+@Suite("Brief cache")
+struct BriefCacheServiceTests {
+
+    @Test("round-trips a brief and isolates users and deals")
+    func roundTripsAndIsolates() async throws {
+        let root = FileManager.default.temporaryDirectory
+            .appendingPathComponent("PitchOS-BriefCache-\(UUID().uuidString)", isDirectory: true)
+        let service = BriefCacheService(rootURL: root)
+        defer { try? FileManager.default.removeItem(at: root) }
+
+        let userID = UUID()
+        let otherUserID = UUID()
+        let dealID = UUID()
+        let brief = CachedBrief(
+            userId: userID,
+            dealId: dealID,
+            briefText: "Prospect Snapshot:\nA grounded brief.",
+            promptVersion: Prompts.MeetingBrief.version,
+            createdAt: Date()
+        )
+
+        try await service.save(brief)
+
+        let loaded = try await service.load(userId: userID, dealId: dealID)
+        let otherUser = try await service.load(userId: otherUserID, dealId: dealID)
+        let standalone = try await service.load(userId: userID, dealId: nil)
+
+        #expect(loaded == brief)
+        #expect(otherUser == nil)
+        #expect(standalone == nil)
+    }
+
+    @Test("clearing one user leaves another user's cache intact")
+    func clearIsScopedToUser() async throws {
+        let root = FileManager.default.temporaryDirectory
+            .appendingPathComponent("PitchOS-BriefCache-\(UUID().uuidString)", isDirectory: true)
+        let service = BriefCacheService(rootURL: root)
+        defer { try? FileManager.default.removeItem(at: root) }
+
+        let firstUser = UUID()
+        let secondUser = UUID()
+        let firstBrief = CachedBrief(
+            userId: firstUser,
+            dealId: nil,
+            briefText: "First user's brief",
+            promptVersion: Prompts.MeetingBrief.version,
+            createdAt: Date()
+        )
+        let secondBrief = CachedBrief(
+            userId: secondUser,
+            dealId: nil,
+            briefText: "Second user's brief",
+            promptVersion: Prompts.MeetingBrief.version,
+            createdAt: Date()
+        )
+
+        try await service.save(firstBrief)
+        try await service.save(secondBrief)
+        try await service.clear(userId: firstUser)
+
+        #expect(try await service.load(userId: firstUser, dealId: nil) == nil)
+        #expect(try await service.load(userId: secondUser, dealId: nil) == secondBrief)
+    }
+}
+
 @Suite("Generation limits")
 struct GenerationLimitTests {
 

@@ -61,8 +61,10 @@ struct MeetingBriefView: View {
                         if !vm.isStreaming && vm.hasContent {
                             HStack {
                                 CopyButton("Copy Brief", text: vm.briefText)
-                                Spacer()
-                                RatingView { rating in Task { await vm.rate(rating) } }
+                                if vm.lastOutputId != nil {
+                                    Spacer()
+                                    RatingView { rating in Task { await vm.rate(rating) } }
+                                }
                             }
 
                             Button("Regenerate") { vm.clear() }
@@ -79,7 +81,10 @@ struct MeetingBriefView: View {
         }
         .navigationTitle("Meeting Brief")
         .navigationBarTitleDisplayMode(.inline)
-        .onAppear { initViewModel() }
+        .task {
+            initViewModel()
+            await viewModel?.loadCachedBrief()
+        }
         .alert("Error", isPresented: Binding(
             get: { viewModel?.error != nil },
             set: { if !$0 { viewModel?.error = nil } }
@@ -124,6 +129,13 @@ struct MeetingBriefView: View {
                 }
             }
             .padding(.bottom, Spacing.sm + 4)
+
+            if vm.isCachedLocally {
+                Label("Saved on this device · available offline", systemImage: "wifi.slash")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .padding(.bottom, Spacing.sm)
+            }
 
             Divider().opacity(0.3).padding(.bottom, Spacing.sm + 4)
 

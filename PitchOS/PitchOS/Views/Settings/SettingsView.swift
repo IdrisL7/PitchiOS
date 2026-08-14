@@ -53,6 +53,7 @@ struct SettingsView: View {
                             Button(role: .destructive) {
                                 Task {
                                     try? await vm.signOut()
+                                    try? await BriefCacheService.shared.clear(userId: vm.profile.id)
                                     appState.currentUser = nil
                                     appState.profile = nil
                                 }
@@ -102,6 +103,7 @@ struct SettingsView: View {
                 guard let vm = viewModel else { return }
                 Task {
                     if await vm.deleteAccount() {
+                        try? await BriefCacheService.shared.clear(userId: vm.profile.id)
                         appState.currentUser = nil
                         appState.profile = nil
                     }
